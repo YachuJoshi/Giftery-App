@@ -1,0 +1,78 @@
+/* --------------------------- */
+/* HEADER COMPONENT */
+/* --------------------------- */
+
+header {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.705), rgba(0, 0, 0, 0.705)), url(../img/gift-background.jpg);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 100vh;
+}
+
+.header__text-box {
+  position: absolute;
+  width: 1140px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+h1 {
+  text-transform: uppercase;
+  font-weight: 300;
+  color: #fff;
+  font-size: 240%;
+  margin-bottom: 25px;
+  word-spacing: 4px;
+  letter-spacing: 1px;
+}
+
+.header--btn:link,
+.header--btn:visited {
+  background-color: #ff7675;
+  border: 1px solid #ff7675;
+  display: inline-block;
+  padding: 15px 30px;
+  color: white;
+  text-decoration: none;
+  font-weight: 300;
+  border-radius: 200px;
+  margin-right: 10px;
+  transition: background-color 0.4s;
+}
+
+.header--btn:hover,
+.header--btn:active {
+  background-color: #c53f3f;
+  border: 1px solid #c53f3f;
+}
+
+
+.header__main-nav {
+  float: right;
+  list-style: none;
+  margin-top: 36px;
+}
+
+.header__main-nav li {
+  display: inline-block;
+  margin-right: 50px;
+}
+
+.header__main-nav li a:link,
+.header__main-nav li a:visited {
+  text-decoration: none;
+  padding: 8px 0;
+  color: #fff;
+  font-size: 90%;
+  font-weight: 300;
+  text-transform: uppercase;
+  border-bottom: 1.5px solid transparent;
+  transition: border-bottom 0.4s;
+}
+
+.header__main-nav li a:hover,
+.header__main-nav li a:active {
+  border-bottom: 1.5px solid #c53f3f;
+}

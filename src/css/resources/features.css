@@ -1,0 +1,47 @@
+/* --------------------------- */
+/* FEATURES SECTION COMPONENT */
+/* --------------------------- */
+
+.features-section {
+  padding-top: 20px;
+  background-color: #C94C4C;
+  color: #fff;
+  padding-bottom: 60px;
+}
+
+.features-section__heading-text {
+  padding-top: 15px;
+  width: 70%;
+  margin-left: 15%;
+  font-size: 110%;
+}
+
+.features-section h2:after {
+  display: block;
+  height: 2px;
+  background-color: #fff;
+  content: " ";
+  width: 200px;
+  margin: 0 auto;
+  margin-top: 30px;
+}
+
+h3 {
+  font-weight: 300;
+  text-transform: uppercase;
+  font-size: 100%;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.features-section__icons {
+  display: block;
+  font-size: 340%;
+  margin-top: 36px;
+  margin-bottom: 26px;
+  margin-left: 36.5%;
+}
+
+
+
+
