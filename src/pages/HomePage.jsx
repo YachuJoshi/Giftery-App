@@ -3,12 +3,13 @@ import React from "react";
 import { HeaderComponent } from '../componenets/Header';
 import { ArticleComponent } from '../componenets/Article';
 import { FeatureComponent } from '../componenets/Features';
+import { TestimonialComponent } from '../componenets/Testimonials';
 
 class HomePage extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      emailInput: ''
+      emailInput: '',
     };
   }
 
@@ -24,9 +25,10 @@ class HomePage extends React.Component {
         <HeaderComponent />
         <ArticleComponent parentCallBackForEmail={this.setEmailInputValue} />
         <FeatureComponent />
+        <TestimonialComponent />
       </>
     );
   }
 }
 
-export default HomePage;
+export { HomePage };

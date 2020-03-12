@@ -1,0 +1,75 @@
+/* --------------------------- */
+/* TESTIMONIALS COMPONENT */
+/* --------------------------- */
+
+.testimonials-section {
+  background-color: #fde6e1;
+  color: #2E1733;
+  padding-top: 32px;
+  height: 568px;
+}
+
+.testimonials-section--image {
+  height: 200px;
+  border-radius: 50%;
+  margin-left: 42%;
+}
+
+.testimonials-section--blockquote {
+  font-style: italic;
+  font-size: 110%;
+  line-height: 110%;
+  position: relative;
+  width: 70%;
+  margin-left: 15%;
+}
+
+.testimonials-section--blockquote p {
+  display: inline-block;
+  margin-top: 16px;
+  margin-left: 45px;
+}
+
+.testimonials-section--cite {
+  position: relative;
+  text-align: center;
+  display: block;
+  font-size: 110%;
+  margin-top: 15px;
+  margin-bottom: 36px;
+}
+
+.testimonials-section--cite::after {
+  position: absolute;
+  content:"\201C";
+  display: block;
+  font-size: 280%;
+  margin-top: 50px;
+}
+
+.testimonials-section__icon-left, 
+.testimonials-section__icon-right {
+  position: absolute;
+  color: #e4453d;
+  margin-top: 80px;
+  font-size: 180%;
+  cursor: pointer;
+  transition: color 0.4s;
+}
+
+.testimonials-section__icon-left:hover, 
+.testimonials-section__icon-right:hover,
+.testimonials-section__icon-left:active, 
+.testimonials-section__icon-right:active {
+  color: #cd3800;
+}
+
+.testimonials-section__icon-left {
+  margin-left: -361.5px;
+}
+
+.testimonials-section__icon-right {
+  margin-left: 120px;
+}
+
+
