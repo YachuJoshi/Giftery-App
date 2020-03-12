@@ -1,0 +1,59 @@
+/* --------------------------- */
+/* PLANS COMPONENT */
+/* --------------------------- */
+
+.plans-section {
+  padding-top: 56px;
+  background-color: #C94C4C;
+  color: #fff;
+  padding-bottom: 60px;
+}
+
+h4 {
+  font-weight: 300;
+  text-transform: uppercase;
+  font-size: 180%;
+  text-align: center;
+  word-spacing: 2px;
+  letter-spacing: 2px;
+  margin-bottom: 40px;
+}
+
+h4:after {
+  display: block;
+  height: 2px;
+  background-color: #fff;
+  content: " ";
+  width: 200px;
+  margin: 0 auto;
+  margin-top: 30px;
+}
+
+.plans-section__icons {
+  display: block;
+  font-size: 260%;
+  margin-top: 40px;
+  margin-bottom: 26px;
+  margin-left: 40%;
+}
+
+.plans--get-startedBtn:link,
+.plans--get-startedBtn:visited {
+  text-transform: capitalize;
+  font-size: 90%;
+  font-weight: 500;
+  color: #ff2220;
+  text-decoration: none;
+  display: inline-block;
+  padding: 15px 30px;
+  background-color: #fff;
+  border-radius: 200px;
+  margin-left: 30px;
+  transition: background-color 0.4s, color 0.4s;
+}
+
+.plans--get-startedBtn:hover,
+.plans--get-startedBtn:active {
+  color: #db0200;
+  background-color: #e6e6e6;
+}

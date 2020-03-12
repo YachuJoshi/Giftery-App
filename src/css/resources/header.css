@@ -34,16 +34,19 @@ h1 {
   border: 1px solid #ff7675;
   display: inline-block;
   padding: 15px 30px;
-  color: white;
+  color: #fff;
   text-decoration: none;
   font-weight: 300;
   border-radius: 200px;
   margin-right: 10px;
   transition: background-color 0.4s;
+  font-weight: 500;
+  font-size: 90%;
 }
 
 .header--btn:hover,
 .header--btn:active {
+  font-weight: 500;
   background-color: #c53f3f;
   border: 1px solid #c53f3f;
 }

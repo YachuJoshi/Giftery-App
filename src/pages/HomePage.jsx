@@ -4,6 +4,7 @@ import { HeaderComponent } from '../componenets/Header';
 import { ArticleComponent } from '../componenets/Article';
 import { FeatureComponent } from '../componenets/Features';
 import { TestimonialComponent } from '../componenets/Testimonials';
+import { PlansComponent } from '../componenets/Plans';
 
 class HomePage extends React.Component {
   constructor(props) {
@@ -26,6 +27,7 @@ class HomePage extends React.Component {
         <ArticleComponent parentCallBackForEmail={this.setEmailInputValue} />
         <FeatureComponent />
         <TestimonialComponent />
+        <PlansComponent parentCallBackForEmail={this.setEmailInputValue} />
       </>
     );
   }

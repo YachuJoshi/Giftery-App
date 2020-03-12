@@ -6,7 +6,7 @@
   background-color: #fde6e1;
   color: #2E1733;
   padding-top: 32px;
-  height: 568px;
+  height: 600px;
 }
 
 .testimonials-section--image {
@@ -18,7 +18,7 @@
 .testimonials-section--blockquote {
   font-style: italic;
   font-size: 110%;
-  line-height: 110%;
+  line-height: 120%;
   position: relative;
   width: 70%;
   margin-left: 15%;
