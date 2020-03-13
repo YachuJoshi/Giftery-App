@@ -1,12 +1,12 @@
 import React from "react";
 
-import { HeaderComponent } from '../componenets/Header';
-import { ArticleComponent } from '../componenets/Article';
-import { FeatureComponent } from '../componenets/Features';
-import { TestimonialComponent } from '../componenets/Testimonials';
-import { PlansComponent } from '../componenets/Plans';
-import { FeedBackFormComponent } from '../componenets/Form';
-import { FooterComponent } from '../componenets/Footer';
+import { HeaderComponent } from '../components/Header';
+import { ArticleComponent } from '../components/Article';
+import { FeatureComponent } from '../components/Features';
+import { TestimonialComponent } from '../components/Testimonials';
+import { PlansComponent } from '../components/Plans';
+import { FeedBackFormComponent } from '../components/Form';
+import { FooterComponent } from '../components/Footer';
 
 class HomePage extends React.Component {
   constructor(props) {
