@@ -18,7 +18,7 @@ class TestimonialComponent extends React.Component {
       Prices are amazing and perfect for little ones to do some shopping with their pocket money.`,
 
         `I managed to get presents for them, for friends, family and even my dad! There truly is something for everyone 
-      and Sarah is so welcoming and helpful. You must visit this little treasure trove asap!`,
+      and the site is so welcoming and helpful. You must visit this little treasure trove as soon as possible!`,
 
         `Love this shop, always changing what's in there so there's always something new to catch your eye. Warm, 
       friendly welcome even when you take a pushchair in and fill the shop up!`
@@ -30,7 +30,7 @@ class TestimonialComponent extends React.Component {
     const { customerImageIndex, customerImages } = this.state;
     const renderingImage = customerImageIndex ? (
       <img src={customerImages[customerImageIndex - 1]}
-        alt="Customer Image"
+        alt="Customer"
         className="testimonials-section--image" />
     ) : null;
     return renderingImage;

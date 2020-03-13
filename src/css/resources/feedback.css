@@ -59,6 +59,7 @@
   background-color: #c53f3f;
   outline: none;
 }
+.section-feedback__submit-btn:active { transform: translateY(2px); }
 
 .section-feedback__form--input-box::placeholder,
 .section-feedback__form--input-textbox::placeholder {

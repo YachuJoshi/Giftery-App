@@ -1,0 +1,65 @@
+/* --------------------------- */
+/* FOOTER COMPONENT */
+/* --------------------------- */
+
+footer {
+  padding-top: 40px;
+  background-color: #C94C4C;
+  height: 162px;
+  color: #fff;
+}
+
+.footer__about-us-list {
+  list-style: none;
+  float: left;
+}
+
+.footer__social-icons-list {
+  list-style: none;
+  float: right;
+}
+
+.footer__about-us-list li,
+.footer__social-icons-list li {
+  cursor: pointer;
+  display: inline-block;
+}
+
+.footer__social-icons-list li {
+  font-size: 132%;
+  margin-right: 28px;
+}
+
+.footer__about-us-list li:last-child,
+.footer__social-icons-list li:last-child {
+  margin-right: 0;
+}
+
+.footer__about-us-list li a:link, 
+.footer__about-us-list li a:visited {
+  letter-spacing: 0.25px;
+  text-decoration: none;
+  color: #fff;
+  margin-left: 36px;
+  transition: color 0.4s;
+}
+
+.footer__social-icon {
+  transition: color 0.4s;
+}
+
+.footer__social-icon:hover {
+  color: #131418;
+}
+
+.footer__about-us-list li a:hover, 
+.footer__about-us-list li a:active {
+  color: #ccc;
+}
+
+.footer__text {
+  margin-top: 64px;
+  text-align: center;
+  word-spacing: 3px;
+  letter-spacing: 0.5px;
+}

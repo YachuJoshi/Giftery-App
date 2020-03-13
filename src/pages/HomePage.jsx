@@ -6,6 +6,7 @@ import { FeatureComponent } from '../componenets/Features';
 import { TestimonialComponent } from '../componenets/Testimonials';
 import { PlansComponent } from '../componenets/Plans';
 import { FeedBackFormComponent } from '../componenets/Form';
+import { FooterComponent } from '../componenets/Footer';
 
 class HomePage extends React.Component {
   constructor(props) {
@@ -58,6 +59,7 @@ class HomePage extends React.Component {
           parentCallBackForFormInput={this.handleFormInputChange}
           submitForm={this.submitForm}
         />
+        <FooterComponent />
       </>
     );
   }
