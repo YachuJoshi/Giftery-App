@@ -48,14 +48,14 @@ class TestimonialComponent extends React.Component {
     return renderingBlockQuote;
   }
 
-  updateImageIndex = (type, index) => {
+  updateImageIndex = (type, factor) => {
     let { customerImageIndex, customerImages } = this.state;
     if (type === 'Left' && customerImageIndex === 1) {
       customerImageIndex = customerImages.length;
     } else if (type === 'Right' && customerImageIndex === customerImages.length) {
       customerImageIndex = 1;
     } else {
-      customerImageIndex += index;
+      customerImageIndex += factor;
     }
     this.setState({ customerImageIndex });
   }
