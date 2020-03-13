@@ -5,6 +5,8 @@
 .section-feedback {
   background-color: #FDE6E1;
   color: #2E1733;
+  padding-top: 18px;
+  padding-bottom: 42px;
 }
 
 .section-feedback__form {
