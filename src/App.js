@@ -7,7 +7,7 @@ import './css/resources/article.css';
 import './css/resources/features.css';
 import './css/resources/testimonials.css';
 import './css/resources/plans.css';
-
+import './css/resources/feedback.css'
 
 import './css/vendors/grid.css';
 

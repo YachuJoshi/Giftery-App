@@ -5,13 +5,30 @@ import { ArticleComponent } from '../componenets/Article';
 import { FeatureComponent } from '../componenets/Features';
 import { TestimonialComponent } from '../componenets/Testimonials';
 import { PlansComponent } from '../componenets/Plans';
+import { FeedBackFormComponent } from '../componenets/Form';
 
 class HomePage extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       emailInput: '',
+      formInput: {
+        nameInput: '',
+        emailInput: '',
+        findUsInput: 'Friends',
+        newsletterInput: true,
+        feedbackInput: ''
+      }
     };
+  }
+
+  handleFormInputChange = (event) => {
+    const name = event.target.name;
+    const formInput = this.state.formInput;
+    name === "newsletterInput" ?
+      formInput[name] = event.target.checked :
+      formInput[name] = event.target.value;
+    this.setState({ formInput });
   }
 
   setEmailInputValue = (emailDataFromChild) => {
@@ -20,7 +37,12 @@ class HomePage extends React.Component {
     });
   }
 
+  submitForm = () => {
+    console.log(this.state.formInput);
+  }
+
   render() {
+    const { nameInput, emailInput, newsletterInput, feedbackInput } = this.state.formInput;
     return (
       <>
         <HeaderComponent />
@@ -28,6 +50,14 @@ class HomePage extends React.Component {
         <FeatureComponent />
         <TestimonialComponent />
         <PlansComponent parentCallBackForEmail={this.setEmailInputValue} />
+        <FeedBackFormComponent
+          nameInput={nameInput}
+          emailInput={emailInput}
+          newsletterInput={newsletterInput}
+          feedbackInput={feedbackInput}
+          parentCallBackForFormInput={this.handleFormInputChange}
+          submitForm={this.submitForm}
+        />
       </>
     );
   }

@@ -27,7 +27,7 @@ class PlansComponent extends React.Component {
         </div>
 
         <div className="row">
-          <div class="col span-1-of-3 box">
+          <div class="col span-1-of-3">
             <FaPencilAlt className="plans-section__icons" />
             <h3> Sign Up {<> &amp; </>} Login </h3>
             <p align="justify" className="plans-section__text">
@@ -36,7 +36,7 @@ class PlansComponent extends React.Component {
               </p>
           </div>
 
-          <div class="col span-1-of-3 box">
+          <div class="col span-1-of-3">
             <FaSearch className="plans-section__icons" />
             <h3> Search {<> &amp; </>} Select </h3>
             <p align="justify" className="plans-section__text">
@@ -44,7 +44,7 @@ class PlansComponent extends React.Component {
               </p>
           </div>
 
-          <div class="col span-1-of-3 box">
+          <div class="col span-1-of-3">
             <FiShoppingCart className="plans-section__icons" />
             <h3> Order {<> &amp; </>} Payment </h3>
             <p align="justify" className="plans-section__text">

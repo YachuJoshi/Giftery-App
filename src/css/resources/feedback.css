@@ -1,0 +1,68 @@
+/* --------------------------- */
+/* FEEDBACK COMPONENT */
+/* --------------------------- */
+
+.section-feedback {
+  background-color: #FDE6E1;
+  color: #2E1733;
+}
+
+.section-feedback__form {
+  width: 60%;
+  margin: 0 auto;
+}
+
+.section-feedback__form--input-box,
+.section-feedback__form--input-textbox,
+.section-feedback__form--input-select {
+  width: 100%;
+  padding: 15px 30px;
+  width: 400px;
+  border-radius: 200px;
+  border: 1px solid #ccc;
+  transition: border 0.4s;
+  outline: none;
+}
+
+.section-feedback__form--input-box:focus,
+.section-feedback__form--input-textbox:focus,
+.section-feedback__form--input-select:focus {
+  border: 1.5px solid #ff3331;
+}
+
+.section-feedback__form--input-textbox {
+  height: 120px;
+}
+
+.section-feedback__form--input-checkbox {
+  margin: 12px 5px 15px 0;
+  outline: none;
+}
+
+.section-feedback__submit-btn {
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 80%;
+  cursor: pointer;
+  font-weight: 500;
+  background-color: #ff7675;
+  padding: 14px 28px;
+  border-radius: 200px;
+  border: 1px solid transparent;
+  transition: background-color 0.4s;
+}
+
+.section-feedback__submit-btn:hover, 
+.section-feedback__submit-btn:active {
+  background-color: #c53f3f;
+  outline: none;
+}
+
+.section-feedback__form--input-box::placeholder,
+.section-feedback__form--input-textbox::placeholder {
+  text-transform: capitalize;
+  font-size: 110%;
+  color: #ff5453;
+  line-height: 90px;
+  font-family: Verdana, Tahoma, sans-serif;
+}
