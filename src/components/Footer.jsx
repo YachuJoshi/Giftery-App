@@ -1,5 +1,7 @@
 import React from 'react';
 
+import styles from '../css/resources/footer.module.css';
+
 import { FaFacebookF, FaTwitter, FaGooglePlusG, FaInstagram, FaGithub } from 'react-icons/fa';
 
 const FooterComponent = () => {
@@ -15,7 +17,7 @@ const FooterComponent = () => {
     <footer>
       <div className="row">
         <div className="col span-1-of-2">
-          <ul className="footer__about-us-list">
+          <ul className={styles.footer__aboutUsList}>
             {footerItemList.map((item, index) => (
               <li key={index}>
                 <a href="#getStarted"> {item} </a>
@@ -26,17 +28,17 @@ const FooterComponent = () => {
         </div>
 
         <div className="col span-1-of-2">
-          <ul className="footer__social-icons-list">
-            <li> <FaFacebookF className="footer__social-icon" /> </li>
-            <li> <FaTwitter className="footer__social-icon" /> </li>
-            <li> <FaGooglePlusG className="footer__social-icon" /> </li>
-            <li> <FaInstagram className="footer__social-icon" /> </li>
-            <li> <FaGithub className="footer__social-icon" /> </li>
+          <ul className={styles.footer__socialIconsList}>
+            <li> <FaFacebookF className={styles.footer__socialIcon} /> </li>
+            <li> <FaTwitter className={styles.footer__socialIcon} /> </li>
+            <li> <FaGooglePlusG className={styles.footer__socialIcon} /> </li>
+            <li> <FaInstagram className={styles.footer__socialIcon} /> </li>
+            <li> <FaGithub className={styles.footer__socialIcon} /> </li>
           </ul>
         </div>
 
         <div className="row">
-          <p class="footer__text">
+          <p className={styles.footer__text}>
             Copyright {<> &copy; </>} 2020 by Yachu Joshi. All Rights Reserved.
               </p>
         </div>

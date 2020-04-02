@@ -1,16 +1,18 @@
 import React from 'react';
 
+import styles from '../css/resources/feedback.module.css';
+
 class FeedBackFormComponent extends React.Component {
   render() {
     const { nameInput, emailInput, newsletterInput, feedbackInput } = this.props;
     return (
-      <section className="section-feedback">
+      <section className={styles.sectionFeedback}>
         <div className="row">
-          <h2> We're Happy To Hear From You </h2>
+          <h2 className={styles.feedbackHeading}> We're Happy To Hear From You </h2>
         </div>
 
         <div className="row">
-          <form className="section-feedback__form"
+          <form className={styles.sectionFeedback__form}
             onSubmit={
               event => {
                 event.preventDefault();
@@ -21,11 +23,12 @@ class FeedBackFormComponent extends React.Component {
                 <label htmlFor="name"> Name </label>
               </div>
               <div className="col span-2-of-3">
-                <input type="text"
+                <input
+                  type="text"
                   name="nameInput"
                   placeholder="Your Name"
                   value={nameInput}
-                  className="section-feedback__form--input-box"
+                  className={styles.sectionFeedback__formInputBox}
                   required
                   onChange={event => this.props.parentCallBackForFormInput(event)}
                   onBlur={event => this.props.parentCallBackForFormInput(event)}
@@ -38,11 +41,12 @@ class FeedBackFormComponent extends React.Component {
                 <label htmlFor="email"> Email </label>
               </div>
               <div className="col span-2-of-3">
-                <input type="text"
+                <input
+                  type="email"
                   name="emailInput"
                   placeholder="Your Email"
                   value={emailInput}
-                  className="section-feedback__form--input-box"
+                  className={styles.sectionFeedback__formInputBox}
                   required
                   onChange={event => this.props.parentCallBackForFormInput(event)}
                   onBlur={event => this.props.parentCallBackForFormInput(event)}
@@ -58,7 +62,7 @@ class FeedBackFormComponent extends React.Component {
                 <select
                   name="findUsInput"
                   id="findUsInput"
-                  className="section-feedback__form--input-select"
+                  className={styles.sectionFeedback__formInputSelect}
                   onChange={event => this.props.parentCallBackForFormInput(event)}
                   onBlur={event => this.props.parentCallBackForFormInput(event)}
                 >
@@ -66,7 +70,6 @@ class FeedBackFormComponent extends React.Component {
                   <option value="Search Engine"> Search Engine </option>
                   <option value="Advertisement"> Advertisement </option>
                   <option value="Others"> Other </option>
-
                 </select>
               </div>
             </div>
@@ -76,14 +79,15 @@ class FeedBackFormComponent extends React.Component {
                 <label htmlFor="newsletter"> Newsletter? </label>
               </div>
               <div className="col span-2-of-3">
-                <input type="checkbox"
+                <input
+                  type="checkbox"
                   name="newsletterInput"
-                  className="section-feedback__form--input-checkbox"
+                  className={styles.sectionFeedback__formInputCheckbox}
                   checked={newsletterInput}
                   onChange={event => this.props.parentCallBackForFormInput(event)}
                   onBlur={event => this.props.parentCallBackForFormInput(event)}
                 />
-                  Yes, Please!
+                Yes, Please!
                 </div>
             </div>
 
@@ -95,7 +99,7 @@ class FeedBackFormComponent extends React.Component {
                 <textarea
                   name="feedbackInput"
                   placeholder="Your Message"
-                  className="section-feedback__form--input-textbox"
+                  className={styles.sectionFeedback__formInputTextbox}
                   value={feedbackInput}
                   onChange={event => this.props.parentCallBackForFormInput(event)}
                   onBlur={event => this.props.parentCallBackForFormInput(event)}
@@ -110,7 +114,7 @@ class FeedBackFormComponent extends React.Component {
               <div className="col span-2-of-3">
                 <input
                   type="submit"
-                  className="section-feedback__submit-btn"
+                  className={styles.sectionFeedback__submitBtn}
                   value="Submit"
                 />
               </div>

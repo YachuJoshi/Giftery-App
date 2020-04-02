@@ -9,7 +9,7 @@ article {
   height: 460px;
 }
 
-h2 {
+.articleHeading {
   font-weight: 300;
   text-transform: uppercase;
   text-align: center;
@@ -20,7 +20,7 @@ h2 {
   margin-bottom: 30px;
 }
 
-h2:after {
+.articleHeading:after {
   display: block;
   height: 2px;
   background-color: #2E1733;
@@ -37,8 +37,8 @@ h2:after {
   margin-left: 15%;
 }
 
-.article--get-startedBtn:link,
-.article--get-startedBtn:visited {
+.articleGetStartedBtn:link,
+.articleGetStartedBtn:visited {
   color: #fff;
   font-size: 90%;
   left: 50%;
@@ -52,13 +52,12 @@ h2:after {
   transition: background-color 0.4s;
 }
 
-.article--get-startedBtn:hover,
-.article--get-startedBtn:active {
+.articleGetStartedBtn:hover,
+.articleGetStartedBtn:active {
   background-color: #c53f3f;
 }
 
-.article--input-email,
-.plans-section--input-email {
+.articleInputEmail {
   margin-left: 228px;
   margin-top: 25px;
   padding: 15px 30px;
@@ -69,12 +68,11 @@ h2:after {
   transition: border 0.4s;
 }
 
-.article--input-email:focus {
+.articleInputEmail:focus {
   border: 1.5px solid #ff3331;
 }
 
-.article--input-email::placeholder,
-.plans-section--input-email::placeholder {
+.articleInputEmail::placeholder {
   text-transform: capitalize;
   font-size: 110%;
   color: #ff2220;

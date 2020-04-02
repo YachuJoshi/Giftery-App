@@ -1,12 +1,16 @@
 import React from 'react';
 
+import { Link } from '@reach/router';
+
+import styles from '../css/resources/article.module.css';
+
 class ArticleComponent extends React.Component {
   render() {
     return (
       <article>
         <div className="row">
-          <h2> We Got The Perfect Gift For Everyone! </h2>
-          <p align="justify" className="article__text">
+          <h2 className={styles.articleHeading}> We Got The Perfect Gift For Everyone! </h2>
+          <p align="justify" className={styles.article__text}>
             Gifts are the best means to convey love, wishes, and congratulatory messages to your loved ones.
             They add fun and fervor to every occasion while making your loved ones beaming with a smile.
             Choose from our extensive collection of yummy cakes, splendid flowers, assorted chocolates, and
@@ -18,7 +22,7 @@ class ArticleComponent extends React.Component {
           <input type="email"
             name="email"
             placeholder="Type your email...."
-            className="article--input-email"
+            className={styles.articleInputEmail}
             required
             onChange={
               event => this.props.parentCallBackForEmail(event.target.value)
@@ -27,7 +31,7 @@ class ArticleComponent extends React.Component {
               event => this.props.parentCallBackForEmail(event.target.value)
             }
           />
-          <a class="article--get-startedBtn" href="#getStarted"> Get Started For Free! </a>
+          <Link to="/categories" className={styles.articleGetStartedBtn} > Get Started For Free! </Link>
         </div>
 
       </article>

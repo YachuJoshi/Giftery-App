@@ -1,23 +1,20 @@
 import React from 'react';
+import { Router } from '@reach/router';
 
 import './css/resources/reset.css';
 
-import './css/resources/header.css';
-import './css/resources/article.css';
-import './css/resources/features.css';
-import './css/resources/testimonials.css';
-import './css/resources/plans.css';
-import './css/resources/feedback.css'
-import './css/resources/footer.css';
-
 import './css/vendors/grid.css';
 
-import { HomePage } from './pages/HomePage'
+import { HomePage } from './pages/HomePage';
+import { CategoriesPage } from './pages/CategoriesPage';
 
 function App() {
   return (
     <div className="App">
-      <HomePage />
+      <Router>
+        <HomePage path="/" />
+        <CategoriesPage path="/categories" />
+      </Router>
     </div>
   );
 }

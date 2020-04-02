@@ -1,11 +1,15 @@
 import React from 'react';
 
+import { Link } from '@reach/router';
+
+import styles from '../css/resources/header.module.css';
+
 const HeaderComponent = () => {
   return (
     <header>
       <nav>
         <div className="row">
-          <ul className="header__main-nav">
+          <ul className={styles.header__mainNav}>
             <li> <a href="#features"> Features </a> </li>
             <li> <a href="#cart"> Cart </a> </li>
             <li> <a href="#plans"> Sign Up </a> </li>
@@ -14,12 +18,12 @@ const HeaderComponent = () => {
         </div>
       </nav>
 
-      <div className="header__text-box">
+      <div className={styles.header__textBox}>
         <h1> Find The Perfect Gift, Everytime! </h1>
-        <a class="header--btn" href="#getStarted"> I'm Interested! </a>
-        <a class="header--btn" href="#getStarted"> Show Me More! </a>
+        <Link to="/categories" className={styles.headerbtn}> I'm Interested!  </Link>
+        <Link to="/categories" className={styles.headerbtn} > Show Me More! </Link>
       </div>
-    </header>
+    </header >
   );
 }
 

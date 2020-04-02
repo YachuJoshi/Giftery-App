@@ -10,7 +10,7 @@ header {
   height: 100vh;
 }
 
-.header__text-box {
+.header__textBox {
   position: absolute;
   width: 1140px;
   top: 50%;
@@ -28,8 +28,8 @@ h1 {
   letter-spacing: 1px;
 }
 
-.header--btn:link,
-.header--btn:visited {
+.headerbtn:link,
+.headerbtn:visited {
   background-color: #ff7675;
   border: 1px solid #ff7675;
   display: inline-block;
@@ -44,27 +44,26 @@ h1 {
   font-size: 90%;
 }
 
-.header--btn:hover,
-.header--btn:active {
+.headerbtn:hover,
+.headerbtn:active {
   font-weight: 500;
   background-color: #c53f3f;
   border: 1px solid #c53f3f;
 }
 
-
-.header__main-nav {
+.header__mainNav {
   float: right;
   list-style: none;
   margin-top: 36px;
 }
 
-.header__main-nav li {
+.header__mainNav li {
   display: inline-block;
   margin-right: 50px;
 }
 
-.header__main-nav li a:link,
-.header__main-nav li a:visited {
+.header__mainNav li a:link,
+.header__mainNav li a:visited {
   text-decoration: none;
   padding: 8px 0;
   color: #fff;
@@ -75,7 +74,7 @@ h1 {
   transition: border-bottom 0.4s;
 }
 
-.header__main-nav li a:hover,
-.header__main-nav li a:active {
+.header__mainNav li a:hover,
+.header__mainNav li a:active {
   border-bottom: 1.5px solid #c53f3f;
 }

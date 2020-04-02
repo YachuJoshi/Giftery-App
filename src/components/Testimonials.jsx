@@ -1,5 +1,7 @@
 import React from 'react';
 
+import styles from '../css/resources/testimonials.module.css';
+
 import { FaAngleLeft, FaAngleRight } from "react-icons/fa";
 
 import customerPic1 from '../css/img/customer-1.jpg';
@@ -28,23 +30,24 @@ class TestimonialComponent extends React.Component {
 
   renderCustomerImages = () => {
     const { customerImageIndex, customerImages } = this.state;
-    const renderingImage = customerImageIndex ? (
+    const renderingImage = (
       <img src={customerImages[customerImageIndex - 1]}
         alt="Customer"
-        className="testimonials-section--image" />
-    ) : null;
+        className={styles.testimonialsSectionImage} />
+    );
     return renderingImage;
   }
 
   renderBlockQuotes = () => {
     const { customerImageIndex, customerNames, blockquotes, } = this.state;
-    const renderingBlockQuote = customerImageIndex ? (
-      <blockquote align="justify" className="testimonials-section--blockquote">
-        <cite className="testimonials-section--cite">
+    const renderingBlockQuote = (
+      <blockquote align="justify" className={styles.testimonialsSectionBlockquote}>
+        <cite className={styles.testimonialsSectionCite}>
           {customerNames[customerImageIndex - 1]}
         </cite>
         <p> {blockquotes[customerImageIndex - 1]} </p>
-      </blockquote>) : null;
+      </blockquote>
+    );
     return renderingBlockQuote;
   }
 
@@ -62,21 +65,21 @@ class TestimonialComponent extends React.Component {
 
   render() {
     return (
-      <section className="testimonials-section">
+      <section className={styles.testimonialsSection}>
         <div class="row">
-          <h2> Here's What Our Customers Say! </h2>
+          <h2 className={styles.testimonialsHeading}> Here's What Our Customers Say! </h2>
         </div>
 
         <div className="row">
-          <figure className="testimonials-section__image-container">
+          <figure className={styles.testimonialsSsection__imageContainer}>
             {this.renderCustomerImages()}
 
             <FaAngleLeft
-              className="testimonials-section__icon-left"
+              className={styles.testimonialsSection__iconLeft}
               onClick={() => this.updateImageIndex('Left', -1)}
             />
             <FaAngleRight
-              className="testimonials-section__icon-right"
+              className={styles.testimonialsSection__iconRight}
               onClick={() => this.updateImageIndex('Right', 1)}
             />
 
@@ -90,4 +93,4 @@ class TestimonialComponent extends React.Component {
   }
 }
 
-export { TestimonialComponent }
+export { TestimonialComponent };

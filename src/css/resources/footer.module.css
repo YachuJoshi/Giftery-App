@@ -9,34 +9,34 @@ footer {
   color: #fff;
 }
 
-.footer__about-us-list {
+.footer__aboutUsList {
   list-style: none;
   float: left;
 }
 
-.footer__social-icons-list {
+.footer__socialIconsList {
   list-style: none;
   float: right;
 }
 
-.footer__about-us-list li,
-.footer__social-icons-list li {
+.footer__aboutUsList li,
+.footer__socialIconsList li {
   cursor: pointer;
   display: inline-block;
 }
 
-.footer__social-icons-list li {
+.footer__socialIconsList li {
   font-size: 132%;
   margin-right: 28px;
 }
 
-.footer__about-us-list li:last-child,
-.footer__social-icons-list li:last-child {
+.footer__aboutUsList li:last-child,
+.footer__socialIconsList li:last-child {
   margin-right: 0;
 }
 
-.footer__about-us-list li a:link, 
-.footer__about-us-list li a:visited {
+.footer__aboutUsList li a:link, 
+.footer__aboutUsList li a:visited {
   letter-spacing: 0.25px;
   text-decoration: none;
   color: #fff;
@@ -44,16 +44,16 @@ footer {
   transition: color 0.4s;
 }
 
-.footer__social-icon {
+.footer__socialIcon {
   transition: color 0.4s;
 }
 
-.footer__social-icon:hover {
+.footer__socialIcon:hover {
   color: #131418;
 }
 
-.footer__about-us-list li a:hover, 
-.footer__about-us-list li a:active {
+.footer__aboutUsList li a:hover, 
+.footer__aboutUsList li a:active {
   color: #ccc;
 }
 

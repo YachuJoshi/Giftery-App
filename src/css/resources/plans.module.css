@@ -2,14 +2,14 @@
 /* PLANS COMPONENT */
 /* --------------------------- */
 
-.plans-section {
+.plansSection {
   padding-top: 56px;
   background-color: #C94C4C;
   color: #fff;
   padding-bottom: 60px;
 }
 
-h4 {
+.plansHeading {
   font-weight: 300;
   text-transform: uppercase;
   font-size: 180%;
@@ -19,7 +19,7 @@ h4 {
   margin-bottom: 40px;
 }
 
-h4:after {
+.plansHeading:after {
   display: block;
   height: 2px;
   background-color: #fff;
@@ -29,7 +29,24 @@ h4:after {
   margin-top: 30px;
 }
 
-.plans-section__icons {
+.plansSectionInputEmail{
+  margin-left: 228px;
+  margin-top: 25px;
+  padding: 15px 30px;
+  width: 400px;
+  border-radius: 200px;
+  border: 1px solid transparent;
+  outline: none;
+  transition: border 0.4s;
+}
+
+.plansSectionInputEmail::placeholder {
+  text-transform: capitalize;
+  font-size: 110%;
+  color: #ff2220;
+}
+
+.plansSection__icons {
   display: block;
   font-size: 260%;
   margin-top: 40px;
@@ -37,8 +54,8 @@ h4:after {
   margin-left: 40%;
 }
 
-.plans--get-startedBtn:link,
-.plans--get-startedBtn:visited {
+.plansGetStartedBtn:link,
+.plansGetStartedBtn:visited {
   text-transform: capitalize;
   font-size: 90%;
   font-weight: 500;
@@ -52,8 +69,8 @@ h4:after {
   transition: background-color 0.4s, color 0.4s;
 }
 
-.plans--get-startedBtn:hover,
-.plans--get-startedBtn:active {
+.plansGetStartedBtn:hover,
+.plansGetStartedBtn:active {
   color: #db0200;
   background-color: #e6e6e6;
 }
