@@ -1,8 +1,6 @@
 import React from 'react';
 
-import styles from '../css/resources/CategoriesPage/header.module.css';
-
-import { NavigationBar } from '../components/CateogiesPage/NavBar';
+import { Header } from '../components/CateogiesPage/Header';
 
 class CategoriesPage extends React.Component {
   constructor(props) {
@@ -10,14 +8,9 @@ class CategoriesPage extends React.Component {
     this.state = {};
   }
   render() {
-    console.log('Hello World!');
     return (
       <>
-        <header className={styles.categoriesPageHeader}>
-          <div className="row">
-            <NavigationBar />
-          </div>
-        </header>
+        <Header />
       </>
     );
   }

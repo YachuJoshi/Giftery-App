@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from '@reach/router';
 
-import styles from '../../css/resources/CategoriesPage/navbar.module.css';
+import styles from '../../css/resources/CategoriesPage/header.module.css';
 
 import { GoSearch } from 'react-icons/go';
 import { FiShoppingCart, FiHeart, FiGift } from 'react-icons/fi';

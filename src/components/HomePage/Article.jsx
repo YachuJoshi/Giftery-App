@@ -19,7 +19,7 @@ const Article = (props) => {
           They add fun and fervor to every occasion while making your loved ones beaming with a smile.
           Choose from our extensive collection of yummy cakes, splendid flowers, assorted chocolates, and
           personalised gifts to offer your friends and family members on important occasions.
-            </p>
+        </p>
       </div>
 
       <div className="row">
