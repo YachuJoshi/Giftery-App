@@ -1,12 +1,11 @@
 import React from 'react';
-
 import { Link } from '@reach/router';
 
-import styles from '../css/resources/header.module.css';
+import styles from '../../css/resources/HomePage/header.module.css';
 
-const HeaderComponent = () => {
+const Header = () => {
   return (
-    <header>
+    <header className={styles.homePageHeader}>
       <nav>
         <div className="row">
           <ul className={styles.header__mainNav}>
@@ -19,7 +18,7 @@ const HeaderComponent = () => {
       </nav>
 
       <div className={styles.header__textBox}>
-        <h1> Find The Perfect Gift, Everytime! </h1>
+        <h1 className={styles.headerHeading}> Find The Perfect Gift, Everytime! </h1>
         <Link to="/categories" className={styles.headerbtn}> I'm Interested!  </Link>
         <Link to="/categories" className={styles.headerbtn} > Show Me More! </Link>
       </div>
@@ -27,4 +26,4 @@ const HeaderComponent = () => {
   );
 }
 
-export { HeaderComponent };
+export { Header };

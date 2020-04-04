@@ -1,14 +1,14 @@
 import React from 'react';
 
-import styles from '../css/resources/testimonials.module.css';
+import styles from '../../css/resources/HomePage/testimonials.module.css';
 
 import { FaAngleLeft, FaAngleRight } from "react-icons/fa";
 
-import customerPic1 from '../css/img/customer-1.jpg';
-import customerPic2 from '../css/img/customer-2.jpg';
-import customerPic3 from '../css/img/customer-3.jpg';
+import customerPic1 from '../../css/img/customer-1.jpg';
+import customerPic2 from '../../css/img/customer-2.jpg';
+import customerPic3 from '../../css/img/customer-3.jpg';
 
-class TestimonialComponent extends React.Component {
+class Testimonial extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -93,4 +93,4 @@ class TestimonialComponent extends React.Component {
   }
 }
 
-export { TestimonialComponent };
+export { Testimonial };

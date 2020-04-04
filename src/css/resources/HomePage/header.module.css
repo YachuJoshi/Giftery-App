@@ -2,8 +2,8 @@
 /* HEADER COMPONENT */
 /* --------------------------- */
 
-header {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.705), rgba(0, 0, 0, 0.705)), url(../img/gift-background.jpg);
+.homePageHeader {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.705), rgba(0, 0, 0, 0.705)), url(../../img/gift-background.jpg);
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
@@ -18,7 +18,7 @@ header {
   transform: translate(-50%, -50%);
 }
 
-h1 {
+.headerHeading {
   text-transform: uppercase;
   font-weight: 300;
   color: #fff;

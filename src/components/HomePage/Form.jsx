@@ -1,8 +1,8 @@
 import React from 'react';
 
-import styles from '../css/resources/feedback.module.css';
+import styles from '../../css/resources/HomePage/feedback.module.css';
 
-class FeedBackFormComponent extends React.Component {
+class FeedBackForm extends React.Component {
   render() {
     const { nameInput, emailInput, newsletterInput, feedbackInput } = this.props;
     return (
@@ -127,4 +127,4 @@ class FeedBackFormComponent extends React.Component {
   }
 }
 
-export { FeedBackFormComponent };
+export { FeedBackForm };

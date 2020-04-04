@@ -1,0 +1,49 @@
+/* --------------------------- */
+/* NAV BAR COMPONENT */
+/* --------------------------- */
+
+.header__mainNav {
+  padding: 21px 0;
+  display: flex;
+  flex-flow: row nowrap;
+  list-style: none;
+}
+
+.header__mainNav li {
+  margin-left: 32px;
+}
+
+.header__mainNav li a:link,
+.header__mainNav li a:visited {  
+  text-decoration: none;
+  padding: 8px 0;
+  color: #fff;
+  margin-top: 20px;
+  font-size: 90%;
+  font-weight: 300;
+  text-transform: uppercase;
+  border-bottom: 1.5px solid transparent;
+  transition: border-bottom 0.4s;
+}
+
+.header__mainNav li a:hover,
+.header__mainNav li a:active {
+  border-bottom: 1.5px solid #fff;
+}
+
+.header__rightNav {
+  display: flex;
+  flex-flow: row nowrap;
+  list-style: none;
+  margin-left: 345px;
+}
+
+.header__rightNav li .headerIcon {
+  font-size: 130%;
+  cursor: pointer;
+}
+
+.header__rightNav li .headerIcon:hover,
+.header__rightNav li .headerIcon:active {
+  transform: scale(1.2);
+}

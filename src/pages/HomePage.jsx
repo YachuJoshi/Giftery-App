@@ -1,12 +1,12 @@
 import React from "react";
 
-import { HeaderComponent } from '../components/Header';
-import { ArticleComponent } from '../components/Article';
-import { FeatureComponent } from '../components/Features';
-import { TestimonialComponent } from '../components/Testimonials';
-import { PlansComponent } from '../components/Plans';
-import { FeedBackFormComponent } from '../components/Form';
-import { FooterComponent } from '../components/Footer';
+import { Header } from '../components/HomePage/Header';
+import { Article } from '../components/HomePage/Article';
+import { Feature } from '../components/HomePage/Features';
+import { Testimonial } from '../components/HomePage/Testimonials';
+import { Plans } from '../components/HomePage/Plans';
+import { FeedBackForm } from '../components/HomePage/Form';
+import { Footer } from '../components/HomePage/Footer';
 
 class HomePage extends React.Component {
   constructor(props) {
@@ -46,12 +46,16 @@ class HomePage extends React.Component {
     const { nameInput, emailInput, newsletterInput, feedbackInput } = this.state.formInput;
     return (
       <>
-        <HeaderComponent />
-        <ArticleComponent parentCallBackForEmail={this.setEmailInputValue} />
-        <FeatureComponent />
-        <TestimonialComponent />
-        <PlansComponent parentCallBackForEmail={this.setEmailInputValue} />
-        <FeedBackFormComponent
+        <Header />
+        <Article
+          parentCallBackForEmail={this.setEmailInputValue}
+        />
+        <Feature />
+        <Testimonial />
+        <Plans
+          parentCallBackForEmail={this.setEmailInputValue}
+        />
+        <FeedBackForm
           nameInput={nameInput}
           emailInput={emailInput}
           newsletterInput={newsletterInput}
@@ -59,7 +63,14 @@ class HomePage extends React.Component {
           parentCallBackForFormInput={this.handleFormInputChange}
           submitForm={this.submitForm}
         />
-        <FooterComponent />
+        <Footer
+          footerItemList={[
+            'About Us',
+            'Blog',
+            'Press',
+            'iOS App',
+            'Android App']}
+        />
       </>
     );
   }

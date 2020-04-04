@@ -1,12 +1,12 @@
 import React from 'react';
 
-import styles from '../css/resources/features.module.css';
+import styles from '../../css/resources/HomePage/features.module.css';
 
 import { IoMdInfinite, IoMdThumbsUp } from "react-icons/io";
 import { GiRunningNinja } from "react-icons/gi";
 import { FiShoppingCart } from "react-icons/fi";
 
-const FeatureComponent = () => {
+const Feature = () => {
   return (
     <section className={styles.featuresSection}>
       <div className="row">
@@ -60,4 +60,4 @@ const FeatureComponent = () => {
   );
 }
 
-export { FeatureComponent }
+export { Feature }

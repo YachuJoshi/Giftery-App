@@ -1,18 +1,11 @@
 import React from 'react';
 
-import styles from '../css/resources/footer.module.css';
+import styles from '../../css/resources/HomePage/footer.module.css';
 
 import { FaFacebookF, FaTwitter, FaGooglePlusG, FaInstagram, FaGithub } from 'react-icons/fa';
 
-const FooterComponent = () => {
-  const footerItemList = [
-    'About Us',
-    'Blog',
-    'Press',
-    'iOS App',
-    'Android App',
-  ];
-
+const Footer = (props) => {
+  const { footerItemList } = props;
   return (
     <footer>
       <div className="row">
@@ -47,4 +40,4 @@ const FooterComponent = () => {
   );
 }
 
-export { FooterComponent }
+export { Footer }

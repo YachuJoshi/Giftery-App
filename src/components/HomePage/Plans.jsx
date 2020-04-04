@@ -2,12 +2,12 @@ import React from 'react';
 
 import { Link } from '@reach/router';
 
-import styles from '../css/resources/plans.module.css';
+import styles from '../../css/resources/HomePage/plans.module.css';
 
 import { FaPencilAlt, FaSearch } from 'react-icons/fa';
 import { FiShoppingCart } from "react-icons/fi";
 
-class PlansComponent extends React.Component {
+class Plans extends React.Component {
   render() {
     return (
       <section className={styles.plansSection}>
@@ -63,4 +63,4 @@ class PlansComponent extends React.Component {
   }
 }
 
-export { PlansComponent }
+export { Plans }
