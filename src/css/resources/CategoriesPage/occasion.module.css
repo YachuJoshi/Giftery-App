@@ -1,0 +1,87 @@
+/* --------------------------- */
+/* OCCASION COMPONENT */
+/* --------------------------- */
+
+.occassionSection {
+  background-color: #fef3f1;
+  color: #555;
+  padding-bottom: 30px;
+}
+
+.occassionHeading {
+  font-weight: 300;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 180%;
+  word-spacing: 2px;
+  letter-spacing: 1px;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+.occassionHeading:after {
+  display: block;
+  height: 2px;
+  background-color: #555;
+  content: " ";
+  width: 200px;
+  margin: 0 auto;
+  margin-top: 29px;
+}
+
+.occasionsContainer {
+  position: relative;
+  padding: 30px 0;
+}
+
+.occasions {
+  list-style: none;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+.occasions li {
+  margin-left: 2%;
+}
+
+.occasions li img {
+  height: 280px;
+  width: auto;
+}
+
+.iconLeft, 
+.iconRight {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  margin-top: -22px;
+  font-size: 25px;
+  transition: 0.6s ease;
+}
+
+.iconRight {
+  right: 0;
+}
+
+.iconLeft:hover, 
+.iconRight:hover {
+  color: #222;
+  transform: scale(1.2);
+}
+
+.circleDotLeft,
+.circleDotRight {
+  cursor: pointer;
+  position: absolute;
+  font-size: 14px;
+  margin-top: 15px;
+}
+
+.circleDotLeft {
+  left: 49.5%;
+}
+
+.circleDotRight {
+  right: 47.75%;
+}

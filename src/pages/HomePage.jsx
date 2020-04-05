@@ -69,7 +69,8 @@ class HomePage extends React.Component {
             'Blog',
             'Press',
             'iOS App',
-            'Android App']}
+            'Android App'
+          ]}
         />
       </>
     );
