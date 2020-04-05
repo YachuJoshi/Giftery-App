@@ -6,14 +6,14 @@ import './css/resources/reset.css';
 import './css/vendors/grid.css';
 
 import { HomePage } from './pages/HomePage';
-import { CategoriesPage } from './pages/CategoriesPage';
+import { MainPage } from './pages/MainPage';
 
 function App() {
   return (
     <div className="App">
       <Router>
         <HomePage path="/" />
-        <CategoriesPage path="/categories" />
+        <MainPage path="/main" />
       </Router>
     </div>
   );

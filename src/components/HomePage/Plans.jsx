@@ -14,7 +14,8 @@ class Plans extends React.Component {
         <div className="row">
           <h4 className={styles.plansHeading}> Getting Started Is Easier Than Ever! </h4>
           <div className="row">
-            <input type="email"
+            <input
+              type="email"
               name="email"
               placeholder="Type your email...."
               className={styles.plansSectionInputEmail}
@@ -26,7 +27,7 @@ class Plans extends React.Component {
                 event => this.props.parentCallBackForEmail(event.target.value)
               }
             />
-            <Link to="/categories" className={styles.plansGetStartedBtn}> Get Started For Free! </Link>
+            <Link to="/main" className={styles.plansGetStartedBtn}> Get Started For Free! </Link>
           </div>
         </div>
 

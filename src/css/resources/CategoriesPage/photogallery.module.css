@@ -1,0 +1,34 @@
+.photoGalleryContainer {
+  padding: 0;
+}
+
+.giftsPhotoShowCase {
+  list-style: none;
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.giftsPhotoShowCase li {
+  flex: 0 0 25%;
+}
+
+.giftPhoto {
+  width: 100%;
+  margin: 0;
+  overflow: hidden;
+  background-color: #000;
+}
+
+.giftPhoto img {
+  opacity: 0.65;
+  height: 254px;
+  width: 100%;
+  transform: scale(1.12);
+  transition: transform 0.5s, opacity 0.5s;
+}
+
+.giftPhoto img:hover {
+  opacity: 1;
+  transform: scale(1.04);
+}

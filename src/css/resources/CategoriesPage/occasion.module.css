@@ -5,7 +5,7 @@
 .occassionSection {
   background-color: #fef3f1;
   color: #555;
-  padding-bottom: 30px;
+  padding-bottom: 68px;
 }
 
 .occassionHeading {
@@ -15,7 +15,7 @@
   font-size: 180%;
   word-spacing: 2px;
   letter-spacing: 1px;
-  margin-top: 40px;
+  margin-top: 45px;
   margin-bottom: 20px;
 }
 
@@ -46,8 +46,13 @@
 }
 
 .occasions li img {
+  cursor: pointer;
   height: 280px;
   width: auto;
+}
+
+.occasions li img:hover {
+  transform: scale(1.2);
 }
 
 .iconLeft, 
@@ -75,11 +80,11 @@
   cursor: pointer;
   position: absolute;
   font-size: 14px;
-  margin-top: 15px;
+  margin-top: 30px;
 }
 
 .circleDotLeft {
-  left: 49.5%;
+  left: 49.2%;
 }
 
 .circleDotRight {

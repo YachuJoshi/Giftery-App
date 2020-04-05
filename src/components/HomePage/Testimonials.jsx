@@ -4,9 +4,9 @@ import styles from '../../css/resources/HomePage/testimonials.module.css';
 
 import { FaAngleLeft, FaAngleRight } from "react-icons/fa";
 
-import customerPic1 from '../../css/img/customer-1.jpg';
-import customerPic2 from '../../css/img/customer-2.jpg';
-import customerPic3 from '../../css/img/customer-3.jpg';
+import customerPic1 from '../../css/img/Customers/customer-1.jpg';
+import customerPic2 from '../../css/img/Customers/customer-2.jpg';
+import customerPic3 from '../../css/img/Customers/customer-3.jpg';
 
 class Testimonial extends React.Component {
   constructor(props) {

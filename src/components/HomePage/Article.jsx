@@ -23,7 +23,8 @@ const Article = (props) => {
       </div>
 
       <div className="row">
-        <input type="email"
+        <input
+          type="email"
           name="email"
           placeholder="Type your email...."
           className={styles.articleInputEmail}
@@ -35,7 +36,7 @@ const Article = (props) => {
             event => parentCallBackForEmail(event.target.value)
           }
         />
-        <Link to="/categories" className={styles.articleGetStartedBtn} > Get Started For Free! </Link>
+        <Link to="/main" className={styles.articleGetStartedBtn} > Get Started For Free! </Link>
       </div>
 
     </article>

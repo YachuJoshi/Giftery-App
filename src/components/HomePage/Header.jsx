@@ -19,8 +19,8 @@ const Header = () => {
 
       <div className={styles.header__textBox}>
         <h1 className={styles.headerHeading}> Find The Perfect Gift, Everytime! </h1>
-        <Link to="/categories" className={styles.headerbtn}> I'm Interested!  </Link>
-        <Link to="/categories" className={styles.headerbtn} > Show Me More! </Link>
+        <Link to="/main" className={styles.headerbtn}> I'm Interested!  </Link>
+        <Link to="/main" className={styles.headerbtn} > Show Me More! </Link>
       </div>
     </header >
   );
