@@ -1,0 +1,126 @@
+.productsPage__header {
+  height: 480px;
+  width: auto;
+  background-color: #fde6e1;
+}
+
+.header__textBox {
+  position: absolute;
+  left: 50%;
+  top: 40%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.primaryHeading {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  text-transform: uppercase;
+  margin-bottom: 70px;
+  color: rgba(25, 34, 70, 0.9);
+  backface-visibility: hidden;
+}
+
+.primaryHeading__main {
+  display: block;
+  font-size: 112px;
+  font-weight: 300;
+  letter-spacing: 48px;
+  animation: moveFromLeft 1s ease-out;
+}
+
+.primaryHeading__sub {
+  display: block;
+  font-size: 40px;
+  font-weight: 700;
+  letter-spacing: 14px;
+  animation: moveFromRight 1s ease-out;
+}
+
+.buttonPrimary:link,
+.buttonPrimary:visited {
+  text-decoration: none;
+  background-color: #ff7675;
+  color: #fff;
+  text-transform: uppercase;
+  padding: 20px 42px;
+  display: inline-block;
+  border-radius: 100px;
+  position: relative;
+  letter-spacing: 2px;
+  transition: all 0.2s ease-out;
+  animation: moveFromBottom 0.5s ease-out 0.75s;
+  animation-fill-mode: backwards;
+}
+
+.buttonPrimary::after {
+  content: " ";
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  border-radius: 100px;
+  background-color: #ff7675;
+  z-index: -1;
+  transition: all 0.4s ease-out;
+}
+
+.buttonPrimary:hover {
+  transform: translateY(-10px);
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.buttonPrimary:active {
+  transform: translateY(-5px);
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.3);
+}
+
+.buttonPrimary:hover.buttonPrimary::after {
+  opacity: 0;
+  transform: scale(1.5);
+}
+
+@keyframes moveFromLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem);
+  }
+
+  80% {
+    transform: translateX(1rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+@keyframes moveFromRight {
+  0% {
+    opacity: 0;
+    transform: translateX(10rem);
+  }
+
+  80% {
+    transform: translateX(-1rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+@keyframes moveFromBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(3rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

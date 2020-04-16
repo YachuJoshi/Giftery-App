@@ -2,7 +2,7 @@
 /* HEADER COMPONENT */
 /* --------------------------- */
 
-.categoriesPageHeader {
+.header {
   background-color: #c94c4c;
   color: #fff;
 }
@@ -23,7 +23,7 @@
 }
 
 .header__mainNav li a:link,
-.header__mainNav li a:visited {  
+.header__mainNav li a:visited {
   text-decoration: none;
   padding: 8px 0;
   color: #fff;
@@ -56,48 +56,4 @@
 .header__rightNav li .headerIcon:hover,
 .header__rightNav li .headerIcon:active {
   transform: scale(1.2);
-}
-
-/* --------------------------- */
-/* MAIN COMPONENT */
-/* --------------------------- */
-
-.headerMainSection {
-  color: #2E1733;  
-}
-
-.headerTitle {
-  font-weight: 300;
-  text-transform: uppercase;
-  text-align: center;
-  font-size: 180%;
-  word-spacing: 2px;
-  letter-spacing: 1px;
-  margin-top: 36px;
-  margin-bottom: 40px;
-}
-
-.headerTitle:after {
-  display: block;
-  height: 2px;
-  background-color: #2E1733;
-  content: " ";
-  width: 200px;
-  margin: 0 auto;
-  margin-top: 29px;
-}
-
-.description {
-  margin-top: 10px;
-  float: left;
-  width: 47%;
-  font-weight: 400;
-  line-height: 160%;
-}
-
-.headerImage {
-  margin-top: -40px;
-  float: right;
-  height: 550px;
-  width: auto;
 }

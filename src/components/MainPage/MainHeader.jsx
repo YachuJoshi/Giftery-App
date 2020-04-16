@@ -1,6 +1,6 @@
 import React from 'react';
 
-import styles from '../../css/resources/CategoriesPage/header.module.css';
+import styles from '../../css/resources/MainPage/header.module.css';
 
 import HeaderImage from '../../css/img/header-image.jpg';
 

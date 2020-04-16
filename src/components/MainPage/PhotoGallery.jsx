@@ -1,6 +1,6 @@
 import React from 'react';
 
-import styles from '../../css/resources/CategoriesPage/photogallery.module.css';
+import styles from '../../css/resources/MainPage/photogallery.module.css';
 
 const PhotoGallery = ({ GiftPhotoGallery }) => (
   <section className={styles.photoGalleryContainer}>
