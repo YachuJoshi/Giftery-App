@@ -1,6 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import styles from '../css/resources/ProductsPage/main.module.css';
+
+// import cartModalStyles from '../css/resources/ProductsPage/cart.module.css';
 
 import { Header } from '../components/ProductsPage/Header';
 import { ProductItem } from '../components/ProductsPage/ProductItem';
@@ -8,10 +10,31 @@ import { ProductItem } from '../components/ProductsPage/ProductItem';
 import { Footer } from '../components/HomePage/Footer';
 
 import { productDetails as products } from '../mock';
+import { useEffect } from 'react';
 
-const ProductsPage = (props) => {
+const ProductsPage = () => {
+  const [cartModalStatus, setCartModalStatus] = useState(false);
+  const [cart, setCart] = useState([]);
+  let cartArray = [];
 
-  console.log(products);
+  const addToCart = (product) => {
+    cartArray = cart;
+    cartArray.push(product);
+    setCart(cartArray);
+  }
+
+  const removeFromCart = (product) => {
+    cartArray = cart;
+    let indexOfProduct = cartArray.indexOf(product)
+    cartArray.splice(indexOfProduct, 1);
+    setCart(cartArray);
+  }
+
+  useEffect(() => {
+
+  }, [])
+
+  console.log(cart);
   return (
     <>
       <Header />
@@ -20,12 +43,25 @@ const ProductsPage = (props) => {
           <div className={styles.center_Text}>
             <h2 className={styles.secondaryHeading}>Our Products!</h2>
           </div>
-          {/* <div className="row"> */}
           <ul className={styles.productList}>
-            {products.map(product => <ProductItem product={product} />)}
+            {products.map(product =>
+              <ProductItem
+                key={product.name}
+                addToCart={addToCart}
+                removeFromCart={removeFromCart}
+                cartModalStatus={cartModalStatus}
+                setCartModalStatus={setCartModalStatus}
+                product={product}
+              />)}
           </ul>
-          {/* </div> */}
         </section>
+        {/* <div className={cartModalStyles.cartModal}>
+          <div className={cartModalStyles.cartModal__background}>
+            <div className={cartModalStyles.cartModal__container}>
+
+            </div>
+          </div>
+        </div> */}
       </main>
       <Footer
         footerItemList={[

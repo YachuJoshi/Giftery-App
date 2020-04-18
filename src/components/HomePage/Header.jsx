@@ -10,7 +10,7 @@ const Header = () => {
         <div className="row">
           <ul className={styles.header__mainNav}>
             <li> <a href="#features"> Features </a> </li>
-            <li> <a href="#cart"> Cart </a> </li>
+            <li> <Link to="/products"> Cart </Link> </li>
             <li> <a href="#plans"> Sign Up </a> </li>
             <li> <a href="#login"> Login </a> </li>
           </ul>

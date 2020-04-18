@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { useState } from 'react';
 
 import styles from '../../css/resources/ProductsPage/productItems.module.css';
@@ -6,18 +7,27 @@ import { FaRegHeart, FaHeart } from 'react-icons/fa';
 
 const ProductItem = (props) => {
   const [favourite, setFavourite] = useState(false);
-  const ratingStarURL = [
-    'https://cdn4.iconfinder.com/data/icons/badges-and-votes-1/128/Badges_Votes_one_star_rating-26-512.png',
-    'https://cdn4.iconfinder.com/data/icons/badges-and-votes-1/128/Badges_Votes_two_star_rating-24-512.png',
-    'https://cdn4.iconfinder.com/data/icons/badges-and-votes-1/128/Badges_Votes_three_star_rating-23-512.png',
-    'https://cdn4.iconfinder.com/data/icons/badges-and-votes-1/128/Badges_Votes_four_star_rating-22-512.png',
-    'https://cdn4.iconfinder.com/data/icons/badges-and-votes-1/128/Badges_Votes_five_star_rating-21-512.png'
-  ];
-  const { product } = props;
+  const [inCart, setInCart] = useState(false);
+  const { product, cartModalStatus, setCartModalStatus, addToCart, removeFromCart } = props;
+
+  const updateCart = (cart, product) => {
+    !cart ? addToCart(product) : removeFromCart(product);
+  }
+
   return (
     <li className={styles.productItem} key={product.name}>
       <figure className={styles.productImageContainer}>
         <img src={product.imageURL} alt="Product" />
+        <button
+          className={styles.productCartAdder}
+          onClick={() => {
+            updateCart(inCart, product)
+            setInCart(!inCart)
+            setCartModalStatus(!cartModalStatus)
+          }}
+        >
+          {inCart ? 'Added To Cart!' : 'Add To Cart?'}
+        </button>
         <figcaption>{product.name}</figcaption>
         {favourite ?
           <FaHeart

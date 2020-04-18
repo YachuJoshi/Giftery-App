@@ -13,7 +13,7 @@ const productDetails = [
 
   {
     "id": 2,
-    "name": "PhoneSoap Smartphone Sanitizer",
+    "name": "Phone Soap Smartphone Sanitizer",
     "description": "Zap touchscreen germs with this UV sanitizer that takes care of the dirty work for you.",
     "imageURL": "https://www.uncommongoods.com/images/items/25100/25142_1_640px.jpg",
     "price": "9906.40",
