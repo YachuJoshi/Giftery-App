@@ -1,21 +1,24 @@
 import React, { useState } from 'react';
 
 import styles from '../css/resources/ProductsPage/main.module.css';
-
-// import cartModalStyles from '../css/resources/ProductsPage/cart.module.css';
+import cartModalStyles from '../css/resources/ProductsPage/cart.module.css';
 
 import { Header } from '../components/ProductsPage/Header';
 import { ProductItem } from '../components/ProductsPage/ProductItem';
-
+import { CartItem } from '../components/ProductsPage/CartItem';
 import { Footer } from '../components/HomePage/Footer';
 
+import { IoMdClose } from 'react-icons/io';
+
 import { productDetails as products } from '../mock';
-import { useEffect } from 'react';
 
 const ProductsPage = () => {
+  const [renderingFactor, setRenderingFactor] = useState(false);
   const [cartModalStatus, setCartModalStatus] = useState(false);
   const [cart, setCart] = useState([]);
+  const [finalPrice, setFinalPrice] = useState([]);
   let cartArray = [];
+  let totalPriceArray = [];
 
   const addToCart = (product) => {
     cartArray = cart;
@@ -30,15 +33,24 @@ const ProductsPage = () => {
     setCart(cartArray);
   }
 
-  useEffect(() => {
+  const calcTotalPrice = (index, quantity, price) => {
+    totalPriceArray = finalPrice;
+    totalPriceArray.splice(index, 0, quantity * price);
+    setFinalPrice(totalPriceArray)
+  }
 
-  }, [])
+  console.log(finalPrice);
 
-  console.log(cart);
   return (
     <>
-      <Header />
+      <Header
+        inProductPage={true}
+        cartModalStatus={cartModalStatus}
+        cartOnClick={setCartModalStatus}
+      />
+
       <main className="section-main">
+
         <section className={styles.section__Products}>
           <div className={styles.center_Text}>
             <h2 className={styles.secondaryHeading}>Our Products!</h2>
@@ -47,22 +59,44 @@ const ProductsPage = () => {
             {products.map(product =>
               <ProductItem
                 key={product.name}
+                product={product}
                 addToCart={addToCart}
                 removeFromCart={removeFromCart}
+                calcTotalPrice={calcTotalPrice}
                 cartModalStatus={cartModalStatus}
                 setCartModalStatus={setCartModalStatus}
-                product={product}
+                renderingFactor={renderingFactor}
+                setRenderingFactor={setRenderingFactor}
               />)}
           </ul>
         </section>
-        {/* <div className={cartModalStyles.cartModal}>
-          <div className={cartModalStyles.cartModal__background}>
-            <div className={cartModalStyles.cartModal__container}>
 
+        {cartModalStatus &&
+          <section className={cartModalStyles.cartModal}>
+            <div className={cartModalStyles.cartModal__container}>
+              <IoMdClose
+                className={cartModalStyles.closeButton}
+                onClick={() => setCartModalStatus(false)}
+              />
+
+              <h2 className={cartModalStyles.heading}>Your Cart </h2>
+
+              <ul>
+                {cart.map(product => (
+                  <CartItem
+                    key={product.name}
+                    product={product}
+                  // removeFromCart={removeFromCart}
+                  // renderingFactor={renderingFactor}
+                  // setRenderingFactor={setRenderingFactor}
+                  />
+                ))}
+              </ul>
             </div>
-          </div>
-        </div> */}
+          </section>
+        }
       </main>
+
       <Footer
         footerItemList={[
           'About Us',

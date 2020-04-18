@@ -1,0 +1,147 @@
+.cartModal {
+  position: relative;
+}
+
+.heading {
+  font-family: 'PT Sans', sans-serif;
+  position: relative;
+  font-weight: 400;
+  text-transform: uppercase;
+  left: 29%;
+  font-size: 180%;
+  word-spacing: 2px;
+  letter-spacing: 2.8px;
+  margin-top: 36px;
+  margin-bottom: 40px;
+  color: #292828;
+}
+
+.heading:after {
+  position: relative;
+  display: block;
+  height: 2px;
+  background-color: #2E1733;
+  content: "";
+  width: 120px;
+  margin-top: 20px;
+  margin-left: 40px;
+}
+
+.cartModal__container {
+  position: fixed;
+  top: 50%;
+  height: auto;
+  width: 27vw;
+  top: 50%;
+  right: 10px;
+  border-radius: 50px;
+  transform: translateY(-50%);
+  background-color: #fbcbc1;
+}
+
+.closeButton {
+  position: absolute;
+  top: 44px;
+  left: 36px;
+  display: inline-block;
+  font-size: 160%;
+  cursor: pointer;
+  color: #292828;
+  transition: all 0.4s ease-out;
+}
+
+.closeButton:hover {
+  transform: scale(1.12);
+  color: #111;
+}
+
+.cartModal__container ul {
+  list-style: none;
+  display: flex;
+  flex-flow: column;
+  margin: 0 4%;
+}
+
+.cartModal__container ul li {
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+}
+
+.cartModal__container ul li:not(:last-child) {
+  border-bottom: 1.5px solid #333;
+}
+
+.productContainer {
+  display: flex;
+  flex-flow: row wrap;
+  align-content: center;
+}
+
+.productContainer img {
+  margin-left: 2%;
+  display: inline-block;
+  height: 80px;
+  border-radius: 15px;
+  flex: 0 1 20%;
+}
+
+.productDetailsContainer {
+  margin-left: 6%;
+  margin-right: 4%;
+  flex: 0 1 48%;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+}
+
+.productDetailsContainer .productName {
+  color: #1f2932;
+  letter-spacing: 0.2px;
+  word-spacing: 2px;
+  font-size: 17px;
+  font-weight: 700;
+  margin-bottom: 5px;
+  line-height: 120%;
+}
+
+.productDetailsContainer .productDescription {
+  line-height: 120%;
+  font-size: 15px;
+  font-weight: 400;
+  color: #444;
+}
+
+.priceContainer {
+  flex: 0 1 18%;
+  text-align: center;
+}
+
+.productPrice {
+  font-size: 16px;
+  font-weight: 700;
+  color: #bb3838;
+}
+
+.productQuantity {
+  font-size: 18px;
+  font-weight: 400;
+  color: #292828;
+}
+
+.reduceQuantityButton,
+.addQuantityButton {
+  font-size: 22px;
+  cursor: pointer;
+  color: #292828;
+  transition: all 0.4s ease-out;
+}
+
+.reduceQuantityButton:hover,
+.addQuantityButton:hover {
+  color: #111;
+  transform: scale(1.04);
+}
+
+.reduceQuantityButton {
+  margin-top: 10px;
+}

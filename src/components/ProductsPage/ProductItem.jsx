@@ -1,4 +1,3 @@
-/* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { useState } from 'react';
 
 import styles from '../../css/resources/ProductsPage/productItems.module.css';
@@ -8,7 +7,15 @@ import { FaRegHeart, FaHeart } from 'react-icons/fa';
 const ProductItem = (props) => {
   const [favourite, setFavourite] = useState(false);
   const [inCart, setInCart] = useState(false);
-  const { product, cartModalStatus, setCartModalStatus, addToCart, removeFromCart } = props;
+  const {
+    product,
+    setCartModalStatus,
+    calcTotalPrice,
+    renderingFactor,
+    setRenderingFactor,
+    addToCart,
+    removeFromCart
+  } = props;
 
   const updateCart = (cart, product) => {
     !cart ? addToCart(product) : removeFromCart(product);
@@ -23,10 +30,11 @@ const ProductItem = (props) => {
           onClick={() => {
             updateCart(inCart, product)
             setInCart(!inCart)
-            setCartModalStatus(!cartModalStatus)
+            setCartModalStatus(true)
+            setRenderingFactor(!renderingFactor)
           }}
         >
-          {inCart ? 'Added To Cart!' : 'Add To Cart?'}
+          {inCart ? 'Remove From Cart?' : 'Add To Cart?'}
         </button>
         <figcaption>{product.name}</figcaption>
         {favourite ?
@@ -40,7 +48,7 @@ const ProductItem = (props) => {
       </figure>
       <div className={styles.productDeatils}>
         <p className={styles.productDescription}>{product.description}</p>
-        <p className={styles.productPrice}> NRP {Math.round(+product.price)} </p>
+        <p className={styles.productPrice}> NPR {Math.round(+product.price)} </p>
       </div>
     </li>
   )

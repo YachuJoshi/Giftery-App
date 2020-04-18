@@ -10,7 +10,9 @@ import { Footer } from '../components/HomePage/Footer';
 const MainPage = () => {
   return (
     <>
-      <Header />
+      <Header
+        inProductPage={false}
+      />
       <ShoppingCategories
         title={`Occasion`}
         firstImageSources={[
