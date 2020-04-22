@@ -8,6 +8,7 @@ import './css/vendors/grid.css';
 import { HomePage } from './pages/HomePage';
 import { MainPage } from './pages/MainPage';
 import { ProductsPage } from './pages/ProductsPage';
+import { DetailsPage } from './pages/DetailsPage';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <HomePage path="/" />
         <MainPage path="/main" />
         <ProductsPage path="/products" />
+        <DetailsPage path="/details/:id" />
       </Router>
     </div>
   );

@@ -16,9 +16,7 @@ const ProductsPage = () => {
   const [renderingFactor, setRenderingFactor] = useState(false);
   const [cartModalStatus, setCartModalStatus] = useState(false);
   const [cart, setCart] = useState([]);
-  const [finalPrice, setFinalPrice] = useState([]);
   let cartArray = [];
-  let totalPriceArray = [];
 
   const addToCart = (product) => {
     cartArray = cart;
@@ -33,14 +31,6 @@ const ProductsPage = () => {
     setCart(cartArray);
   }
 
-  const calcTotalPrice = (index, quantity, price) => {
-    totalPriceArray = finalPrice;
-    totalPriceArray.splice(index, 0, quantity * price);
-    setFinalPrice(totalPriceArray)
-  }
-
-  console.log(finalPrice);
-
   return (
     <>
       <Header
@@ -51,7 +41,7 @@ const ProductsPage = () => {
 
       <main className="section-main">
 
-        <section className={styles.section__Products}>
+        <section id="product-section" className={styles.section__Products}>
           <div className={styles.center_Text}>
             <h2 className={styles.secondaryHeading}>Our Products!</h2>
           </div>
@@ -62,7 +52,6 @@ const ProductsPage = () => {
                 product={product}
                 addToCart={addToCart}
                 removeFromCart={removeFromCart}
-                calcTotalPrice={calcTotalPrice}
                 cartModalStatus={cartModalStatus}
                 setCartModalStatus={setCartModalStatus}
                 renderingFactor={renderingFactor}
@@ -86,9 +75,6 @@ const ProductsPage = () => {
                   <CartItem
                     key={product.name}
                     product={product}
-                  // removeFromCart={removeFromCart}
-                  // renderingFactor={renderingFactor}
-                  // setRenderingFactor={setRenderingFactor}
                   />
                 ))}
               </ul>
@@ -97,14 +83,7 @@ const ProductsPage = () => {
         }
       </main>
 
-      <Footer
-        footerItemList={[
-          'About Us',
-          'Blog',
-          'Press',
-          'iOS App',
-          'Android App'
-        ]} />
+      <Footer />
     </>
   );
 }

@@ -4,8 +4,14 @@ import styles from '../../css/resources/HomePage/footer.module.css';
 
 import { FaFacebookF, FaTwitter, FaGooglePlusG, FaInstagram, FaGithub } from 'react-icons/fa';
 
-const Footer = (props) => {
-  const { footerItemList } = props;
+const Footer = () => {
+  const footerItemList = [
+    'About Us',
+    'Blog',
+    'Press',
+    'iOS App',
+    'Android App'
+  ]
   return (
     <footer>
       <div className="row">

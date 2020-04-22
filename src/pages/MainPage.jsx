@@ -42,14 +42,7 @@ const MainPage = () => {
           PersonImageSources.Photographer
         ]}
       />
-      <Footer
-        footerItemList={[
-          'About Us',
-          'Blog',
-          'Press',
-          'iOS App',
-          'Android App'
-        ]} />
+      <Footer />
     </>
   );
 }

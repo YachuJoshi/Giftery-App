@@ -3,7 +3,11 @@
   padding: 0;
   box-sizing: border-box;
 }
-  
+
+html {
+  scroll-behavior: smooth;
+}
+
 html,
 body {
   background-color: white;
@@ -19,3 +23,24 @@ body {
   margin: 0 auto;
 }
 
+::selection {
+  background-color: #ff7675;
+  color: #fff;
+}
+
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #eee;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+  background-color: #eee;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background-color: #ff7675
+}

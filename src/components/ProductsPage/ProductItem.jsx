@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from '@reach/router';
 
 import styles from '../../css/resources/ProductsPage/productItems.module.css';
 
@@ -10,7 +11,6 @@ const ProductItem = (props) => {
   const {
     product,
     setCartModalStatus,
-    calcTotalPrice,
     renderingFactor,
     setRenderingFactor,
     addToCart,
@@ -24,7 +24,9 @@ const ProductItem = (props) => {
   return (
     <li className={styles.productItem} key={product.name}>
       <figure className={styles.productImageContainer}>
-        <img src={product.imageURL} alt="Product" />
+        <Link to={`/details/${product.id}`} >
+          <img src={product.imageURL} alt="Product" />
+        </Link>
         <button
           className={styles.productCartAdder}
           onClick={() => {
@@ -50,7 +52,7 @@ const ProductItem = (props) => {
         <p className={styles.productDescription}>{product.description}</p>
         <p className={styles.productPrice}> NPR {Math.round(+product.price)} </p>
       </div>
-    </li>
+    </li >
   )
 };
 

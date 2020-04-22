@@ -12,7 +12,6 @@ class HomePage extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      emailInput: '',
       formInput: {
         nameInput: '',
         emailInput: '',
@@ -47,14 +46,10 @@ class HomePage extends React.Component {
     return (
       <>
         <Header />
-        <Article
-          parentCallBackForEmail={this.setEmailInputValue}
-        />
+        <Article />
         <Feature />
         <Testimonial />
-        <Plans
-          parentCallBackForEmail={this.setEmailInputValue}
-        />
+        <Plans />
         <FeedBackForm
           nameInput={nameInput}
           emailInput={emailInput}
@@ -63,15 +58,7 @@ class HomePage extends React.Component {
           parentCallBackForFormInput={this.handleFormInputChange}
           submitForm={this.submitForm}
         />
-        <Footer
-          footerItemList={[
-            'About Us',
-            'Blog',
-            'Press',
-            'iOS App',
-            'Android App'
-          ]}
-        />
+        <Footer />
       </>
     );
   }

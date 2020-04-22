@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from '@reach/router';
 
 import styles from '../../css/resources/ProductsPage/header.module.css';
 
@@ -21,7 +22,7 @@ const Header = (props) => {
             <span className={styles.primaryHeading__main}>Choose</span>
             <span className={styles.primaryHeading__sub}>From The Very Best</span>
           </h1>
-          <a href="#" className={styles.buttonPrimary}> Start Shopping! </a>
+          <Link to="#" className={styles.buttonPrimary}> Start Shopping! </Link>
         </div>
       </div>
     </>

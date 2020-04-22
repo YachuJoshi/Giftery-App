@@ -1,11 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import { Link } from '@reach/router';
 
 import styles from '../../css/resources/HomePage/article.module.css';
 
 const Article = (props) => {
-  const { parentCallBackForEmail } = props;
+  let [email, setEmail] = useState('');
   return (
     <article className={styles.homePageArticle}>
       <div className="row">
@@ -30,10 +30,10 @@ const Article = (props) => {
           className={styles.articleInputEmail}
           required
           onChange={
-            event => parentCallBackForEmail(event.target.value)
+            event => setEmail(event.target.value)
           }
           onBlur={
-            event => parentCallBackForEmail(event.target.value)
+            event => setEmail(event.target.value)
           }
         />
         <Link to="/main" className={styles.articleGetStartedBtn} > Get Started For Free! </Link>
