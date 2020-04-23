@@ -68,7 +68,7 @@ const ProductsPage = () => {
                 onClick={() => setCartModalStatus(false)}
               />
 
-              <h2 className={cartModalStyles.heading}>Your Cart </h2>
+              <h2 className={cartModalStyles.heading}>Your Cart</h2>
 
               <ul>
                 {cart.map(product => (

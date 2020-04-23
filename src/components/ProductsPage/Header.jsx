@@ -9,6 +9,11 @@ import { NavigationBar } from '../MainPage/NavBar';
 
 const Header = (props) => {
   const { inProductPage, cartModalStatus, cartOnClick } = props;
+  const scrollDown = () => {
+    const elem = document.querySelector(`#product-section`);
+    elem.scrollIntoView();
+  }
+
   return (
     <>
       <NavigationBar
@@ -22,7 +27,7 @@ const Header = (props) => {
             <span className={styles.primaryHeading__main}>Choose</span>
             <span className={styles.primaryHeading__sub}>From The Very Best</span>
           </h1>
-          <Link to="#" className={styles.buttonPrimary}> Start Shopping! </Link>
+          <Link to="#" onClick={() => scrollDown()} className={styles.buttonPrimary}> Start Shopping! </Link>
         </div>
       </div>
     </>

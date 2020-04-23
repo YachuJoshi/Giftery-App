@@ -66,7 +66,7 @@ class Testimonial extends React.Component {
   render() {
     return (
       <section className={styles.testimonialsSection}>
-        <div class="row">
+        <div className="row">
           <h2 className={styles.testimonialsHeading}> Here's What Our Customers Say! </h2>
         </div>
 

@@ -40,7 +40,8 @@
 }
 
 .productCartAdder:hover {
-  background-color: #c94c4c;
+  background-color: #ff5453;
+  transform: translate(-50%, -5px);
 }
 
 .productCartAdder:active {

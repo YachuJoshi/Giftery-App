@@ -31,12 +31,6 @@ class HomePage extends React.Component {
     this.setState({ formInput });
   }
 
-  setEmailInputValue = (emailDataFromChild) => {
-    this.setState({
-      emailInput: emailDataFromChild
-    });
-  }
-
   submitForm = () => {
     console.log(this.state.formInput);
   }
