@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from '@reach/router';
 
-import styles from '../../css/resources/ProductsPage/productItems.module.css';
+import styles from '../../css/resources/ProductsPage/productItems.module.scss';
 
 import { FaRegHeart, FaHeart } from 'react-icons/fa';
 

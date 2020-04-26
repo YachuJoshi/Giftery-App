@@ -1,8 +1,9 @@
+/* eslint-disable no-unused-vars */
 import React, { useState } from 'react';
 
 import { Link } from '@reach/router';
 
-import styles from '../../css/resources/HomePage/article.module.css';
+import styles from '../../css/resources/HomePage/article.module.scss';
 
 const Article = (props) => {
   let [email, setEmail] = useState('');

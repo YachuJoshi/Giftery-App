@@ -1,6 +1,6 @@
 import React from 'react';
 
-import styles from '../../css/resources/HomePage/features.module.css';
+import styles from '../../css/resources/HomePage/features.module.scss';
 
 import { IoMdInfinite, IoMdThumbsUp } from "react-icons/io";
 import { GiRunningNinja } from "react-icons/gi";
@@ -17,8 +17,8 @@ const Feature = () => {
             </p>
       </div>
 
-      <div class="row">
-        <div class="col span-1-of-4">
+      <div className="row">
+        <div className="col span-1-of-4">
           <IoMdInfinite className={styles.featuresSection__icons} />
           <h3> Anytime {<> &mdash; </>} Anywhere </h3>
           <p align="justify" className="featuresSection__text">
@@ -27,7 +27,7 @@ const Feature = () => {
           </p>
         </div>
 
-        <div class="col span-1-of-4">
+        <div className="col span-1-of-4">
           <GiRunningNinja className={styles.featuresSection__icons} />
           <h3> Fast Delivery System </h3>
           <p align="justify" className={styles.featuresSection__text}>
@@ -36,7 +36,7 @@ const Feature = () => {
           </p>
         </div>
 
-        <div class="col span-1-of-4">
+        <div className="col span-1-of-4">
           <IoMdThumbsUp className={styles.featuresSection__icons} />
           <h3> Easy Resolution </h3>
           <p align="justify" className={styles.featuresSection__text}>
@@ -45,7 +45,7 @@ const Feature = () => {
           </p>
         </div>
 
-        <div class="col span-1-of-4">
+        <div className="col span-1-of-4">
           <FiShoppingCart className={styles.featuresSection__icons} />
           <h3> Order Anything </h3>
           <p align="justify" className={styles.featuresSection__text}>

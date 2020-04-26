@@ -1,8 +1,9 @@
+/* eslint-disable no-unused-vars */
 import React, { useState } from 'react';
 
 import { Link } from '@reach/router';
 
-import styles from '../../css/resources/HomePage/plans.module.css';
+import styles from '../../css/resources/HomePage/plans.module.scss';
 
 import { FaPencilAlt, FaSearch } from 'react-icons/fa';
 import { FiShoppingCart } from "react-icons/fi";

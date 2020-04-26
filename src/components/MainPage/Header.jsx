@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { NavigationBar } from './NavBar';
-import { Main } from './MainHeader';
+import { Main } from './Main';
 
 const Header = () => (
   <>

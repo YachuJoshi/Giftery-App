@@ -4,7 +4,7 @@ import { NavigationBar } from '../components/MainPage/NavBar';
 import { Testimonial } from '../components/HomePage/Testimonials';
 import { Footer } from '../components/HomePage/Footer';
 
-import styles from '../css/resources/DetailsPage/details.module.css';
+import styles from '../css/resources/DetailsPage/details.module.scss';
 
 import { productDetails as products } from '../mock';
 

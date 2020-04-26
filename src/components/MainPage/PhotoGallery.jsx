@@ -1,12 +1,12 @@
 import React from 'react';
 
-import styles from '../../css/resources/MainPage/photogallery.module.css';
+import styles from '../../css/resources/MainPage/photogallery.module.scss';
 
 const PhotoGallery = ({ GiftPhotoGallery }) => (
   <section className={styles.photoGalleryContainer}>
     <ul className={styles.giftsPhotoShowCase}>
       {GiftPhotoGallery.map((giftPhoto, index) => (
-        <li>
+        <li key={giftPhoto}>
           <figure className={styles.giftPhoto}>
             <img
               src={giftPhoto}

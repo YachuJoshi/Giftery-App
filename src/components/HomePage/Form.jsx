@@ -1,6 +1,6 @@
 import React from 'react';
 
-import styles from '../../css/resources/HomePage/feedback.module.css';
+import styles from '../../css/resources/HomePage/feedback.module.scss';
 
 class FeedBackForm extends React.Component {
   render() {

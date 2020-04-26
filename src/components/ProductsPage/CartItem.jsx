@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import styles from '../../css/resources/ProductsPage/cart.module.css';
+import styles from '../../css/resources/ProductsPage/cart.module.scss';
 
 import { IoIosArrowUp, IoIosArrowDown } from 'react-icons/io';
 

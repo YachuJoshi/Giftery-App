@@ -1,6 +1,6 @@
 import React from 'react';
 
-import styles from '../../css/resources/HomePage/testimonials.module.css';
+import styles from '../../css/resources/HomePage/testimonials.module.scss';
 
 import { FaAngleLeft, FaAngleRight } from "react-icons/fa";
 

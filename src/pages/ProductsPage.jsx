@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
-import styles from '../css/resources/ProductsPage/main.module.css';
-import cartModalStyles from '../css/resources/ProductsPage/cart.module.css';
+import styles from '../css/resources/ProductsPage/main.module.scss';
+import cartModalStyles from '../css/resources/ProductsPage/cart.module.scss';
 
 import { Header } from '../components/ProductsPage/Header';
 import { ProductItem } from '../components/ProductsPage/ProductItem';

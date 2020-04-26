@@ -1,6 +1,6 @@
 import React from 'react';
 
-import styles from '../../css/resources/MainPage/occasion.module.css';
+import styles from '../../css/resources/MainPage/occasion.module.scss';
 
 import { FaChevronLeft, FaChevronRight, FaCircle } from 'react-icons/fa';
 
@@ -41,12 +41,12 @@ class ShoppingCategories extends React.Component {
             <ul className={styles.occasions}>
               {!activePageIndex ?
                 firstImageSources.map((imageSrc, index) => (
-                  <li>
+                  <li key={imageSrc}>
                     <img src={imageSrc} key={index} alt={`Events`} />
                   </li>
                 )) :
                 secondImageSources.map((imageSrc, index) => (
-                  <li>
+                  <li key={imageSrc}>
                     <img src={imageSrc} key={index} alt={`Events`} />
                   </li>
                 ))}

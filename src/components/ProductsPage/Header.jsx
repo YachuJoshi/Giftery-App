@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from '@reach/router';
 
-import styles from '../../css/resources/ProductsPage/header.module.css';
+import styles from '../../css/resources/ProductsPage/header.module.scss';
 
 import { NavigationBar } from '../MainPage/NavBar';
 

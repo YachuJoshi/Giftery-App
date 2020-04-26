@@ -1,6 +1,6 @@
 import React from 'react';
 
-import styles from '../../css/resources/HomePage/footer.module.css';
+import styles from '../../css/resources/HomePage/footer.module.scss';
 
 import { FaFacebookF, FaTwitter, FaGooglePlusG, FaInstagram, FaGithub } from 'react-icons/fa';
 

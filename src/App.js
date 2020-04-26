@@ -1,9 +1,9 @@
 import React from 'react';
 import { Router } from '@reach/router';
 
-import './css/resources/reset.css';
+import './css/resources/reset.scss';
 
-import './css/vendors/grid.css';
+import './css/vendors/grid.scss';
 
 import { HomePage } from './pages/HomePage';
 import { MainPage } from './pages/MainPage';
