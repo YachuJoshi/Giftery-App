@@ -6,7 +6,7 @@ class FeedBackForm extends React.Component {
   render() {
     const { nameInput, emailInput, newsletterInput, feedbackInput } = this.props;
     return (
-      <section className={styles.sectionFeedback}>
+      <section id="section-feedback" className={styles.sectionFeedback}>
         <div className="row">
           <h2 className={styles.feedbackHeading}> We're Happy To Hear From You </h2>
         </div>

@@ -8,7 +8,7 @@ import { FiShoppingCart } from "react-icons/fi";
 
 const Feature = () => {
   return (
-    <section className={styles.featuresSection}>
+    <section id="section-features" className={styles.featuresSection}>
       <div className="row">
         <h2 className={styles.featuresHeading}> Delivering Gifts In Nepal Since 2016! </h2>
         <p align="justify" className={styles.featuresSection__headingText}>

@@ -11,7 +11,7 @@ import { FiShoppingCart } from "react-icons/fi";
 const Plans = () => {
   const [email, setEmail] = useState('');
   return (
-    <section className={styles.plansSection}>
+    <section id="section-plans" className={styles.plansSection}>
       <div className="row">
         <h4 className={styles.plansHeading}> Getting Started Is Easier Than Ever! </h4>
         <div className="row">

@@ -4,15 +4,20 @@ import { Link } from '@reach/router';
 import styles from '../../css/resources/HomePage/header.module.scss';
 
 const Header = () => {
+  const scrollDown = (element) => {
+    const elem = document.querySelector(element);
+    elem.scrollIntoView();
+  }
+
   return (
     <header className={styles.homePageHeader}>
       <nav>
         <div className="row">
           <ul className={styles.header__mainNav}>
-            <li> <a href="#features"> Features </a> </li>
+            <li> <Link to="#" onClick={() => scrollDown(`#section-features`)}> Features </Link> </li>
             <li> <Link to="/products"> Cart </Link> </li>
-            <li> <a href="#plans"> Sign Up </a> </li>
-            <li> <a href="#login"> Login </a> </li>
+            <li> <Link to="#" onClick={() => scrollDown(`#section-plans`)}> Sign Up </Link> </li>
+            <li> <Link to="#" onClick={() => scrollDown(`#section-feedback`)}> Login </Link> </li>
           </ul>
         </div>
       </nav>
