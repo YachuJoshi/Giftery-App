@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
-import { Link } from '@reach/router';
+import React, { useState } from "react";
+import { Link } from "@reach/router";
 
-import styles from '../../css/resources/ProductsPage/productItems.module.scss';
+import styles from "../../css/resources/ProductsPage/productItems.module.scss";
 
-import { FaRegHeart, FaHeart } from 'react-icons/fa';
+import { FaRegHeart, FaHeart } from "react-icons/fa";
 
 const ProductItem = (props) => {
   const [favourite, setFavourite] = useState(false);
@@ -14,46 +14,52 @@ const ProductItem = (props) => {
     renderingFactor,
     setRenderingFactor,
     addToCart,
-    removeFromCart
+    removeFromCart,
   } = props;
 
   const updateCart = (cart, product) => {
     !cart ? addToCart(product) : removeFromCart(product);
-  }
+  };
 
   return (
     <li className={styles.productItem} key={product.name}>
       <figure className={styles.productImageContainer}>
-        <Link to={`/details/${product.id}`} >
+        <Link to={`/details/${product.id}`}>
           <img src={product.imageURL} alt="Product" />
         </Link>
         <button
           className={styles.productCartAdder}
           onClick={() => {
-            updateCart(inCart, product)
-            setInCart(!inCart)
-            setCartModalStatus(true)
-            setRenderingFactor(!renderingFactor)
+            updateCart(inCart, product);
+            setInCart(!inCart);
+            setCartModalStatus(true);
+            setRenderingFactor(!renderingFactor);
           }}
         >
-          {inCart ? 'Remove From Cart?' : 'Add To Cart?'}
+          {inCart ? "Remove From Cart?" : "Add To Cart?"}
         </button>
         <figcaption>{product.name}</figcaption>
-        {favourite ?
+        {favourite ? (
           <FaHeart
             className={styles.favIcon}
-            onClick={() => setFavourite(!favourite)} /> :
+            onClick={() => setFavourite(!favourite)}
+          />
+        ) : (
           <FaRegHeart
             className={styles.favIcon}
-            onClick={() => setFavourite(!favourite)} />
-        }
+            onClick={() => setFavourite(!favourite)}
+          />
+        )}
       </figure>
       <div className={styles.productDeatils}>
         <p className={styles.productDescription}>{product.description}</p>
-        <p className={styles.productPrice}> NPR {Math.round(+product.price)} </p>
+        <p className={styles.productPrice}>
+          {" "}
+          NPR {Math.round(+product.price)}{" "}
+        </p>
       </div>
-    </li >
-  )
+    </li>
+  );
 };
 
 export { ProductItem };

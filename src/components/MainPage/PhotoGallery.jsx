@@ -1,6 +1,6 @@
-import React from 'react';
+import React from "react";
 
-import styles from '../../css/resources/MainPage/photogallery.module.scss';
+import styles from "../../css/resources/MainPage/photogallery.module.scss";
 
 const PhotoGallery = ({ GiftPhotoGallery }) => (
   <section className={styles.photoGalleryContainer}>
@@ -8,11 +8,7 @@ const PhotoGallery = ({ GiftPhotoGallery }) => (
       {GiftPhotoGallery.map((giftPhoto, index) => (
         <li key={giftPhoto}>
           <figure className={styles.giftPhoto}>
-            <img
-              src={giftPhoto}
-              key={index}
-              alt="Gift"
-            />
+            <img src={giftPhoto} key={index} alt="Gift" />
           </figure>
         </li>
       ))}

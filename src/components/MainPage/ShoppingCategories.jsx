@@ -1,26 +1,26 @@
-import React from 'react';
+import React from "react";
 
-import styles from '../../css/resources/MainPage/occasion.module.scss';
+import styles from "../../css/resources/MainPage/occasion.module.scss";
 
-import { FaChevronLeft, FaChevronRight, FaCircle } from 'react-icons/fa';
+import { FaChevronLeft, FaChevronRight, FaCircle } from "react-icons/fa";
 
 class ShoppingCategories extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      activePageIndex: 0
-    }
+      activePageIndex: 0,
+    };
   }
 
   updateActivePageIndex = () => {
     let { activePageIndex } = this.state;
     activePageIndex = +!activePageIndex;
     this.setState({ activePageIndex });
-  }
+  };
 
   updateActivePageIndexDot = (page) => {
     this.setState({ activePageIndex: page });
-  }
+  };
 
   render() {
     const { activePageIndex } = this.state;
@@ -39,17 +39,17 @@ class ShoppingCategories extends React.Component {
               onClick={() => this.updateActivePageIndex()}
             />
             <ul className={styles.occasions}>
-              {!activePageIndex ?
-                firstImageSources.map((imageSrc, index) => (
-                  <li key={imageSrc}>
-                    <img src={imageSrc} key={index} alt={`Events`} />
-                  </li>
-                )) :
-                secondImageSources.map((imageSrc, index) => (
-                  <li key={imageSrc}>
-                    <img src={imageSrc} key={index} alt={`Events`} />
-                  </li>
-                ))}
+              {!activePageIndex
+                ? firstImageSources.map((imageSrc, index) => (
+                    <li key={imageSrc}>
+                      <img src={imageSrc} key={index} alt={`Events`} />
+                    </li>
+                  ))
+                : secondImageSources.map((imageSrc, index) => (
+                    <li key={imageSrc}>
+                      <img src={imageSrc} key={index} alt={`Events`} />
+                    </li>
+                  ))}
             </ul>
             <FaCircle
               className={styles.circleDotLeft}
@@ -64,6 +64,6 @@ class ShoppingCategories extends React.Component {
       </section>
     );
   }
-};
+}
 
 export { ShoppingCategories };

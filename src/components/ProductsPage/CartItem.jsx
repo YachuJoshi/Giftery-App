@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
-import styles from '../../css/resources/ProductsPage/cart.module.scss';
+import styles from "../../css/resources/ProductsPage/cart.module.scss";
 
-import { IoIosArrowUp, IoIosArrowDown } from 'react-icons/io';
+import { IoIosArrowUp, IoIosArrowDown } from "react-icons/io";
 
 const CartItem = (props) => {
   const { product } = props;
@@ -24,32 +24,32 @@ const CartItem = (props) => {
           >Remove</span> */}
         </div>
         <div className={styles.priceContainer}>
-          <p
-            className={styles.productPrice}>
+          <p className={styles.productPrice}>
             NPR {productQuantity * Math.round(+product.price)}
           </p>
 
-          {productQuantity === 1 ?
-            <IoIosArrowUp
-              className={styles.reduceQuantityButton} /> :
+          {productQuantity === 1 ? (
+            <IoIosArrowUp className={styles.reduceQuantityButton} />
+          ) : (
             <IoIosArrowUp
               className={styles.reduceQuantityButton}
               onClick={() => {
-                setProducQuantity(productQuantity => productQuantity - 1)
-              }} />
-          }
+                setProducQuantity((productQuantity) => productQuantity - 1);
+              }}
+            />
+          )}
 
           <p className={styles.productQuantity}>{productQuantity}</p>
           <IoIosArrowDown
             className={styles.addQuantityButton}
             onClick={() => {
-              setProducQuantity(productQuantity => productQuantity + 1)
+              setProducQuantity((productQuantity) => productQuantity + 1);
             }}
           />
         </div>
       </figure>
     </li>
-  )
-}
+  );
+};
 
 export { CartItem };

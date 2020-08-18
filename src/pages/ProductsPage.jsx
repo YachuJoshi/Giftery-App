@@ -1,16 +1,16 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
-import styles from '../css/resources/ProductsPage/main.module.scss';
-import cartModalStyles from '../css/resources/ProductsPage/cart.module.scss';
+import styles from "../css/resources/ProductsPage/main.module.scss";
+import cartModalStyles from "../css/resources/ProductsPage/cart.module.scss";
 
-import { Header } from '../components/ProductsPage/Header';
-import { ProductItem } from '../components/ProductsPage/ProductItem';
-import { CartItem } from '../components/ProductsPage/CartItem';
-import { Footer } from '../components/HomePage/Footer';
+import { Header } from "../components/ProductsPage/Header";
+import { ProductItem } from "../components/ProductsPage/ProductItem";
+import { CartItem } from "../components/ProductsPage/CartItem";
+import { Footer } from "../components/HomePage/Footer";
 
-import { IoMdClose } from 'react-icons/io';
+import { IoMdClose } from "react-icons/io";
 
-import { productDetails as products } from '../mock';
+import { productDetails as products } from "../mock";
 
 const ProductsPage = () => {
   const [renderingFactor, setRenderingFactor] = useState(false);
@@ -22,14 +22,14 @@ const ProductsPage = () => {
     cartArray = cart;
     cartArray.push(product);
     setCart(cartArray);
-  }
+  };
 
   const removeFromCart = (product) => {
     cartArray = cart;
-    let indexOfProduct = cartArray.indexOf(product)
+    let indexOfProduct = cartArray.indexOf(product);
     cartArray.splice(indexOfProduct, 1);
     setCart(cartArray);
-  }
+  };
 
   return (
     <>
@@ -40,13 +40,12 @@ const ProductsPage = () => {
       />
 
       <main className="section-main">
-
         <section id="product-section" className={styles.section__Products}>
           <div className={styles.center_Text}>
             <h2 className={styles.secondaryHeading}>Our Products!</h2>
           </div>
           <ul className={styles.productList}>
-            {products.map(product =>
+            {products.map((product) => (
               <ProductItem
                 key={product.name}
                 product={product}
@@ -56,11 +55,12 @@ const ProductsPage = () => {
                 setCartModalStatus={setCartModalStatus}
                 renderingFactor={renderingFactor}
                 setRenderingFactor={setRenderingFactor}
-              />)}
+              />
+            ))}
           </ul>
         </section>
 
-        {cartModalStatus &&
+        {cartModalStatus && (
           <section className={cartModalStyles.cartModal}>
             <div className={cartModalStyles.cartModal__container}>
               <IoMdClose
@@ -71,21 +71,18 @@ const ProductsPage = () => {
               <h2 className={cartModalStyles.heading}>Your Cart</h2>
 
               <ul>
-                {cart.map(product => (
-                  <CartItem
-                    key={product.name}
-                    product={product}
-                  />
+                {cart.map((product) => (
+                  <CartItem key={product.name} product={product} />
                 ))}
               </ul>
             </div>
           </section>
-        }
+        )}
       </main>
 
       <Footer />
     </>
   );
-}
+};
 
 export { ProductsPage };

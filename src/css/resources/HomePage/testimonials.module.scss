@@ -62,14 +62,14 @@
 
 .testimonialsSectionCite::after {
   position: absolute;
-  content:"\201C";
+  content: "\201C";
   display: block;
   font-size: 280%;
   margin-top: 50px;
 }
 
-.testimonialsSection__iconLeft, 
-.testimonialsSection__iconRight{
+.testimonialsSection__iconLeft,
+.testimonialsSection__iconRight {
   position: absolute;
   color: #e4453d;
   margin-top: 80px;
@@ -78,19 +78,17 @@
   transition: color 0.4s;
 }
 
-.testimonials-section__icon-left:hover, 
+.testimonials-section__icon-left:hover,
 .testimonials-section__icon-right:hover,
-.testimonials-section__icon-left:active, 
+.testimonials-section__icon-left:active,
 .testimonials-section__icon-right:active {
   color: #cd3800;
 }
 
-.testimonialsSection__iconLeft{
+.testimonialsSection__iconLeft {
   margin-left: -361.5px;
 }
 
-.testimonialsSection__iconRight{
+.testimonialsSection__iconRight {
   margin-left: 120px;
 }
-
-

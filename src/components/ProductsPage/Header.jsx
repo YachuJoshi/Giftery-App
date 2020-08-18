@@ -1,9 +1,9 @@
-import React from 'react';
-import { Link } from '@reach/router';
+import React from "react";
+import { Link } from "@reach/router";
 
-import styles from '../../css/resources/ProductsPage/header.module.scss';
+import styles from "../../css/resources/ProductsPage/header.module.scss";
 
-import { NavigationBar } from '../MainPage/NavBar';
+import { NavigationBar } from "../MainPage/NavBar";
 
 /* eslint-disable jsx-a11y/anchor-is-valid */
 
@@ -12,7 +12,7 @@ const Header = (props) => {
   const scrollDown = () => {
     const elem = document.querySelector(`#product-section`);
     elem.scrollIntoView();
-  }
+  };
 
   return (
     <>
@@ -25,13 +25,22 @@ const Header = (props) => {
         <div className={styles.header__textBox}>
           <h1 className={styles.primaryHeading}>
             <span className={styles.primaryHeading__main}>Choose</span>
-            <span className={styles.primaryHeading__sub}>From The Very Best</span>
+            <span className={styles.primaryHeading__sub}>
+              From The Very Best
+            </span>
           </h1>
-          <Link to="#" onClick={() => scrollDown()} className={styles.buttonPrimary}> Start Shopping! </Link>
+          <Link
+            to="#"
+            onClick={() => scrollDown()}
+            className={styles.buttonPrimary}
+          >
+            {" "}
+            Start Shopping!{" "}
+          </Link>
         </div>
       </div>
     </>
-  )
+  );
 };
 
 export { Header };

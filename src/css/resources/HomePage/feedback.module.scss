@@ -76,12 +76,15 @@
   transition: background-color 0.4s;
 }
 
-.sectionFeedback__submitBtn:hover, 
+.sectionFeedback__submitBtn:hover,
 .sectionFeedback__submitBtn:active {
   background-color: #c53f3f;
   outline: none;
 }
-.sectionFeedback__submitBtn:active { transform: translateY(2px); }
+
+.sectionFeedback__submitBtn:active {
+  transform: translateY(2px);
+}
 
 .sectionFeedback__formInputBox::placeholder,
 .sectionFeedback__formInputTextbox::placeholder {
@@ -91,6 +94,7 @@
   line-height: 90px;
   font-family: Verdana, Tahoma, sans-serif;
 }
+
 /* 
 .sectionFeedback__formInputCheckbox {
   position: absolute;

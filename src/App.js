@@ -1,14 +1,14 @@
-import React from 'react';
-import { Router } from '@reach/router';
+import React from "react";
+import { Router } from "@reach/router";
 
-import './css/resources/reset.scss';
+import "./css/resources/reset.scss";
 
-import './css/vendors/grid.scss';
+import "./css/vendors/grid.scss";
 
-import { HomePage } from './pages/HomePage';
-import { MainPage } from './pages/MainPage';
-import { ProductsPage } from './pages/ProductsPage';
-import { DetailsPage } from './pages/DetailsPage';
+import { HomePage } from "./pages/HomePage";
+import { MainPage } from "./pages/MainPage";
+import { ProductsPage } from "./pages/ProductsPage";
+import { DetailsPage } from "./pages/DetailsPage";
 
 function App() {
   return (

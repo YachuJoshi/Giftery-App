@@ -1,50 +1,50 @@
-import React from 'react';
+import React from "react";
 
-import { Header } from '../components/MainPage/Header';
-import { ShoppingCategories } from '../components/MainPage/ShoppingCategories';
+import { Header } from "../components/MainPage/Header";
+import { ShoppingCategories } from "../components/MainPage/ShoppingCategories";
 
-import { EventImageSources, GiftPhotoGallery, PersonImageSources } from '../components/MainPage/Images';
-import { PhotoGallery } from '../components/MainPage/PhotoGallery';
-import { Footer } from '../components/HomePage/Footer';
+import {
+  EventImageSources,
+  GiftPhotoGallery,
+  PersonImageSources,
+} from "../components/MainPage/Images";
+import { PhotoGallery } from "../components/MainPage/PhotoGallery";
+import { Footer } from "../components/HomePage/Footer";
 
 const MainPage = () => {
   return (
     <>
-      <Header
-        inProductPage={false}
-      />
+      <Header inProductPage={false} />
       <ShoppingCategories
         title={`Occasion`}
         firstImageSources={[
           EventImageSources.Birthday,
           EventImageSources.Wedding,
-          EventImageSources.Anniversary
+          EventImageSources.Anniversary,
         ]}
         secondImageSources={[
           EventImageSources.Valentines,
           EventImageSources.TeachersDay,
-          EventImageSources.HouseWarming
+          EventImageSources.HouseWarming,
         ]}
       />
-      <PhotoGallery
-        GiftPhotoGallery={GiftPhotoGallery}
-      />
+      <PhotoGallery GiftPhotoGallery={GiftPhotoGallery} />
       <ShoppingCategories
         title={`Cateogiers & Personalities`}
         firstImageSources={[
           PersonImageSources.Men,
           PersonImageSources.Women,
-          PersonImageSources.Kids
+          PersonImageSources.Kids,
         ]}
         secondImageSources={[
           PersonImageSources.PartyStarter,
           PersonImageSources.SuperHero,
-          PersonImageSources.Photographer
+          PersonImageSources.Photographer,
         ]}
       />
       <Footer />
     </>
   );
-}
+};
 
 export { MainPage };
